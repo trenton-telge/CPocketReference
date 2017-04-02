@@ -3,7 +3,9 @@ package com.eventhorizonwebdesign.cpocketreference;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,11 +50,33 @@ public class MainMenuActivity extends AppCompatActivity {
 
         expListView.setAdapter(listAdapter);
         // This line just sets the list adapter
+
+        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v,
+                                        int groupPosition, int childPosition, long id) {
+
+                // TODO debug toast only. Delete for prod.
+                Toast.makeText(
+                        getApplicationContext(),
+                        listDataHeader.get(groupPosition)
+                                + " : "
+                                + listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition), Toast.LENGTH_SHORT)
+                        .show();
+                //TODO switch statement with intents to change activity based on which child is clicked
+                return false;
+            }
+        });
     }
 
     private void prepareListData() {
         listDataHeader = new ArrayList<String>();
+        // This is the array that will hold the Strings for all the header titles.
         listDataChild = new HashMap<String, List<String>>();
+        // This is the HashMap that will link header strings to their respective list of children
 
         // Adding header data
         listDataHeader.add("Reference");
@@ -62,6 +86,7 @@ public class MainMenuActivity extends AppCompatActivity {
         reference.add("ASCII table");
         reference.add("Primitive Types");
 
+        // Add links to HashMap
         listDataChild.put(listDataHeader.get(0), reference); // Header, Child data
     }
 
