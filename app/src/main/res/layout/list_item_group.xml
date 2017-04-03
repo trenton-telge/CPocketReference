@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:background="@color/colorPrimarySuperLight"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:background="#b0bec5">
+    android:padding="8dp">
 
 
     <TextView
         android:id="@+id/lblListHeader"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:textColor="#383838"
-        android:layout_marginLeft="24dp" />
+        android:layout_marginLeft="24dp"
+        android:textColor="@color/colorHeaderText"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="17sp" />
 </LinearLayout>
