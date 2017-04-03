@@ -73,18 +73,36 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     private void prepareListData() {
-        listDataHeader = new ArrayList<String>();
+        listDataHeader = new ArrayList<>();
         // This is the array that will hold the Strings for all the header titles.
-        listDataChild = new HashMap<String, List<String>>();
+        listDataChild = new HashMap<>();
         // This is the HashMap that will link header strings to their respective list of children
 
         // Adding header data
         listDataHeader.add("Reference");
 
         // Adding child data
-        List<String> reference = new ArrayList<String>();
+        List<String> reference = new ArrayList<>();
         reference.add("ASCII table");
         reference.add("Primitive Types");
+        reference.add("Common Libraries");
+        reference.add("Loops");
+        reference.add("Escape Characters");
+        reference.add("Key Words");
+        reference.add("Operators");
+
+        List<String> libraries = new ArrayList<>();
+        libraries.add("iostream");
+        libraries.add("iomanip");
+        libraries.add("cmath");
+
+        List<String> tutorials = new ArrayList<>();
+        tutorials.add("Hello World");
+        tutorials.add("Writing Statements");
+        tutorials.add("Writing Expressions");
+        tutorials.add("Functions");
+        tutorials.add("Encapsulation");
+        tutorials.add("Objects");
 
         // Add links to HashMap
         listDataChild.put(listDataHeader.get(0), reference); // Header, Child data
