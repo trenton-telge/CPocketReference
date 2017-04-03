@@ -133,4 +133,51 @@
         <item>~</item>
         <item>DEL</item>
     </string-array>
+    <string-array name="primitive_types">
+        <item>bool</item>
+        <item>char</item>
+        <item>unsigned char</item>
+        <item>int (2B)</item>
+        <item>int (4B)</item>
+        <item>unsigned int (2B)</item>
+        <item>unsigned int (4B)</item>
+        <item>short</item>
+        <item>unsigned short</item>
+        <item>long</item>
+        <item>unsigned long</item>
+        <item>float</item>
+        <item>double</item>
+        <item>long double</item>
+    </string-array>
+    <string-array name="primitive_tags">
+        <item>[true/false]</item>
+        <item>[ASCII]</item>
+        <item>[ASCII]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Integers]</item>
+        <item>[Decimals]</item>
+        <item>[Decimals]</item>
+        <item>[Decimals]</item>
+    </string-array>
+    <string-array name="primitive_bounds">
+        <item>true or false</item>
+        <item>any ASCII value</item>
+        <item>any ASCII value</item>
+        <item>&#177;32,767</item>
+        <item>&#177;2,147,483,648</item>
+        <item>0 &#8211; 65,535</item>
+        <item>0 &#8211; 4,294,967,295</item>
+        <item>&#177;32,767</item>
+        <item>0 &#8211; 65,535</item>
+        <item>&#177;2,147,483,648</item>
+        <item>0 &#8211; 4,294,967,295</item>
+        <item>1.2E-38 to 3.4E+38</item>
+        <item>2.3E-308 to 1.7E+308</item>
+        <item>3.4E-4932 to 1.1E+4932</item>
+    </string-array>
 </resources>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#303f9f</color>
     <color name="colorPrimarySuperLight">#b0bec5</color>
     <color name="colorHeaderText">#383838</color>
     <color name="colorAccent">#ff530d</color>
+
+    <!--Code Highlighting in UI-->
+    <color name="colorKeyword">#ff530d</color>
 </resources>

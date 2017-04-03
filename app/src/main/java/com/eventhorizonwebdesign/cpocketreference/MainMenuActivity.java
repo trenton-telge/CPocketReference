@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
+import com.eventhorizonwebdesign.cpocketreference.adapters.ExpandableListAdapter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -70,13 +72,18 @@ public class MainMenuActivity extends AppCompatActivity {
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
                 //TODO switch statement with intents to change activity based on which child is clicked
+                Intent intent;
                 switch(listDataHeader.get(groupPosition)){
                     case "Reference":
                         switch(listDataChild.get(
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition)){
                             case "ASCII Table":
-                                Intent intent = new Intent(c, ASCIIListActivity.class);
+                                intent = new Intent(c, ASCIIListActivity.class);
+                                startActivity(intent);
+                                break;
+                            case "Primitive Types":
+                                intent = new Intent(c, PrimitiveListActivity.class);
                                 startActivity(intent);
                                 break;
                         }

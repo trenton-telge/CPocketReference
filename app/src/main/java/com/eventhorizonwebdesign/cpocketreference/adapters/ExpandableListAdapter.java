@@ -1,4 +1,4 @@
-package com.eventhorizonwebdesign.cpocketreference;
+package com.eventhorizonwebdesign.cpocketreference.adapters;
 
 /**
  * Created by Trenton on 4/2/2017.
@@ -14,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import com.eventhorizonwebdesign.cpocketreference.R;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
