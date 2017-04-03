@@ -80,6 +80,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
         // Adding header data
         listDataHeader.add("Reference");
+        listDataHeader.add("Libraries");
+        listDataHeader.add("Tutorials");
 
         // Adding child data
         List<String> reference = new ArrayList<>();
@@ -106,6 +108,8 @@ public class MainMenuActivity extends AppCompatActivity {
 
         // Add links to HashMap
         listDataChild.put(listDataHeader.get(0), reference); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), libraries);
+        listDataChild.put(listDataHeader.get(2), tutorials);
     }
 
     /**
