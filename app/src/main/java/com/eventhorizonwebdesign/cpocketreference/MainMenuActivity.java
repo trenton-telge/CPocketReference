@@ -1,6 +1,8 @@
 package com.eventhorizonwebdesign.cpocketreference;
 // The package is a method of encapsulation. Every class in a package has access to the others' protected methods and variables.
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,6 +52,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         expListView.setAdapter(listAdapter);
         // This line just sets the list adapter
+        final Context c = this.getApplicationContext();
 
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
@@ -67,6 +70,18 @@ public class MainMenuActivity extends AppCompatActivity {
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
                 //TODO switch statement with intents to change activity based on which child is clicked
+                switch(listDataHeader.get(groupPosition)){
+                    case "Reference":
+                        switch(listDataChild.get(
+                                listDataHeader.get(groupPosition)).get(
+                                childPosition)){
+                            case "ASCII Table":
+                                Intent intent = new Intent(c, ASCIIListActivity.class);
+                                startActivity(intent);
+                                break;
+                        }
+                        break;
+                }
                 return false;
             }
         });
@@ -85,7 +100,7 @@ public class MainMenuActivity extends AppCompatActivity {
 
         // Adding child data
         List<String> reference = new ArrayList<>();
-        reference.add("ASCII table");
+        reference.add("ASCII Table");
         reference.add("Primitive Types");
         reference.add("Common Libraries");
         reference.add("Loops");
