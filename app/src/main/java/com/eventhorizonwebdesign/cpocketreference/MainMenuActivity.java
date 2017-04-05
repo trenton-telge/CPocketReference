@@ -71,7 +71,7 @@ public class MainMenuActivity extends AppCompatActivity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
-                //TODO switch statement with intents to change activity based on which child is clicked
+                //TODO default cases are good practice
                 Intent intent;
                 switch(listDataHeader.get(groupPosition)){
                     case "Reference":
@@ -124,6 +124,7 @@ public class MainMenuActivity extends AppCompatActivity {
         tutorials.add("Hello World");
         tutorials.add("Writing Statements");
         tutorials.add("Writing Expressions");
+        tutorials.add("Loops");
         tutorials.add("Functions");
         tutorials.add("Encapsulation");
         tutorials.add("Objects");
