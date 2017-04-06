@@ -46,13 +46,13 @@ public class ASCIIListAdapter extends BaseAdapter{
             convertView = inflater.inflate(R.layout.ascii_list_item_child, null);
             holder.decimalValueView = (TextView) convertView.findViewById(R.id.textView1);
             holder.charTextView = (TextView) convertView.findViewById(R.id.textView2);
-            holder.decimalValueView.setText(results[position]);
-            holder.charTextView.setText(characters[position]);
             convertView.setTag(holder);
             convertView.setClickable(false);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
+        holder.decimalValueView.setText(results[position]);
+        holder.charTextView.setText(characters[position]);
         return convertView;
     }
 

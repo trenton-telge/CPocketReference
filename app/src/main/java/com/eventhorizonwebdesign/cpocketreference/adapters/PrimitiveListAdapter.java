@@ -52,18 +52,18 @@ public class PrimitiveListAdapter extends BaseAdapter {
         ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.keyword_list_item_child, null);
+            convertView = inflater.inflate(R.layout.keyword_list_item_child, parent);
             holder.typeTextView = (TextView) convertView.findViewById(R.id.primitive);
             holder.tagsTextView = (TextView) convertView.findViewById(R.id.tags);
             holder.boundsTextView = (TextView) convertView.findViewById(R.id.range);
-            holder.typeTextView.setText(types[position]);
-            holder.tagsTextView.setText(tags[position]);
-            holder.boundsTextView.setText(bounds[position]);
             convertView.setTag(holder);
             convertView.setClickable(false);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
+        holder.typeTextView.setText(types[position]);
+        holder.tagsTextView.setText(tags[position]);
+        holder.boundsTextView.setText(bounds[position]);
         return convertView;
     }
 }
