@@ -49,8 +49,9 @@ public class PrimitiveListAdapter extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = new ViewHolder();
+        ViewHolder holder;
         if (convertView == null) {
+            holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.keyword_list_item_child, null);
             holder.typeTextView = (TextView) convertView.findViewById(R.id.primitive);
             holder.tagsTextView = (TextView) convertView.findViewById(R.id.tags);
@@ -58,7 +59,10 @@ public class PrimitiveListAdapter extends BaseAdapter {
             holder.typeTextView.setText(types[position]);
             holder.tagsTextView.setText(tags[position]);
             holder.boundsTextView.setText(bounds[position]);
+            convertView.setTag(holder);
             convertView.setClickable(false);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
         return convertView;
     }
