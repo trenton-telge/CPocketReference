@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ASCIIListActivity" />
-        <activity android:name=".PrimitiveListActivity"></activity>
+        <activity android:name=".PrimitiveListActivity" />
+        <activity android:name=".TutorialActivity"></activity>
     </application>
 
 </manifest>

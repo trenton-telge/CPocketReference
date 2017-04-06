@@ -1,6 +1,6 @@
 package com.eventhorizonwebdesign.cpocketreference;
 // The package is a method of encapsulation. Every class in a package has access to the others' protected methods and variables.
-
+//KSP horse-did-nothing-good-word
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -71,7 +71,6 @@ public class MainMenuActivity extends AppCompatActivity {
                                 listDataHeader.get(groupPosition)).get(
                                 childPosition), Toast.LENGTH_SHORT)
                         .show();
-                //TODO default cases are good practice
                 Intent intent;
                 switch(listDataHeader.get(groupPosition)){
                     case "Reference":
@@ -86,7 +85,18 @@ public class MainMenuActivity extends AppCompatActivity {
                                 intent = new Intent(c, PrimitiveListActivity.class);
                                 startActivity(intent);
                                 break;
+                            default:
+                                //TODO throw error
+                                break;
                         }
+                        break;
+                    case "Tutorials":
+                        intent = new Intent(c, TutorialActivity.class);
+                        intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
+                        startActivity(intent);
+                        break;
+                    default:
+                        //TODO Throw error
                         break;
                 }
                 return false;
