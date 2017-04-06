@@ -110,13 +110,13 @@ public class MainMenuActivity extends AppCompatActivity {
         reference.add("ASCII Table");
         reference.add("Primitive Types");
         reference.add("Common Libraries");
-        reference.add("Loops");
         reference.add("Escape Characters");
         reference.add("Key Words");
         reference.add("Operators");
 
         List<String> libraries = new ArrayList<>();
         libraries.add("iostream");
+        libraries.add("fstream");
         libraries.add("iomanip");
         libraries.add("cmath");
 
