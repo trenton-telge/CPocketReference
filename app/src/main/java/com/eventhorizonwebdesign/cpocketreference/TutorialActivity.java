@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.webkit.WebView;
+import android.text.Html;
+import android.widget.TextView;
 
-import com.eventhorizonwebdesign.j420lighter.J420Lighter;
-
+import java.io.BufferedReader;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 public class TutorialActivity extends AppCompatActivity {
@@ -18,26 +19,28 @@ public class TutorialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
 
-        WebView tutorialLoaderView = (WebView) findViewById(R.id.tutorial_webview);
-        tutorialLoaderView.getSettings().setJavaScriptEnabled(true);
+        TextView tutorialLoaderView = (TextView) findViewById(R.id.tutorial_text);
         Intent intent = getIntent();
         String t = intent.getStringExtra("t");
-        //TODO switch on t for which HTML file to show.
         String programCode = "";
         switch(t){
             case "Hello World":
                 try {
                     Resources res = getResources();
                     InputStream in_s = res.openRawResource(R.raw.hello_world);
-                    byte[] b = new byte[in_s.available()];
-                    in_s.read(b);
-                    programCode = new String(b);
+                    BufferedReader b = new BufferedReader(new InputStreamReader(in_s, "UTF-8"));
+                    StringBuffer stringBuffer = new StringBuffer();
+                    String line;
+                    while((line =b.readLine())!=null){
+                        stringBuffer.append(line).append("\n");
+                    }
+                    programCode = stringBuffer.toString();
                 } catch (Exception e) {
                     programCode = "";
                     e.printStackTrace();
                 }
-                programCode = new J420Lighter().highlight(programCode);
-                tutorialLoaderView.loadData(programCode, "text/html; charset=UTF-8", null);
+                //TODO this is not what we will use in the final program (replace for PROD)
+                tutorialLoaderView.setText(Html.fromHtml(programCode));
                 break;
             default:
                 break;
