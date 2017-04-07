@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
+
+
 public class TutorialActivity extends AppCompatActivity {
 
     @Override
@@ -17,5 +19,25 @@ public class TutorialActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String t = intent.getStringExtra("t");
         //TODO switch on t for which HTML file to show.
+        // Commented out until syntax highlighting is complete
+        /*
+        String temp;
+        switch(t){
+            case "Hello World":
+                try {
+                    Resources res = getResources();
+                    InputStream in_s = res.openRawResource();
+                    byte[] b = new byte[in_s.available()];
+                    in_s.read(b);
+                    temp = new String(b);
+                } catch (Exception e) {
+                    temp = "";
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
+        */
     }
 }
