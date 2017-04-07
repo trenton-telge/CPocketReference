@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
+import com.eventhorizonwebdesign.j420lighter.J420Lighter;
 
 
 public class TutorialActivity extends AppCompatActivity {
@@ -19,6 +20,8 @@ public class TutorialActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String t = intent.getStringExtra("t");
         //TODO switch on t for which HTML file to show.
+        String programCode = "";
+        programCode = new J420Lighter().highlight(programCode);
         // Commented out until syntax highlighting is complete
         /*
         String temp;
