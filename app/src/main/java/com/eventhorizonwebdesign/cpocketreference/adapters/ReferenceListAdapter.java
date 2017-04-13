@@ -1,12 +1,5 @@
 package com.eventhorizonwebdesign.cpocketreference.adapters;
 
-/**
- * Created by Trenton on 4/2/2017.
- */
-
-import java.util.HashMap;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -17,15 +10,20 @@ import android.widget.TextView;
 
 import com.eventhorizonwebdesign.cpocketreference.R;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+import java.util.HashMap;
+import java.util.List;
 
+/**
+ * Created by Trenton on 4/7/2017.
+ */
+
+public class ReferenceListAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<String> listDataHeader; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> listDataChild;
-
-    public ExpandableListAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
+    private HashMap<String, List<String[]>> listDataChild;
+    public ReferenceListAdapter(Context context, List<String> listDataHeader,
+                                 HashMap<String, List<String[]>> listChildData) {
         this.context = context;
         this.listDataHeader = listDataHeader;
         this.listDataChild = listChildData;
@@ -42,22 +40,35 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         return childPosition;
     }
 
+    private class ViewHolder {
+        TextView partTextView;
+        TextView argsTextView;
+        TextView purposeTextView;
+    }
+
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = (String) getChild(groupPosition, childPosition);
-
+        //final String childText = (String) getChild(groupPosition, childPosition);
+        ViewHolder holder;
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this.context
+            holder = new ViewHolder();
+            LayoutInflater inflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.main_list_item_child, null);
+            convertView = inflater.inflate(R.layout.ref_list_item_child, null);
+            holder.partTextView = (TextView) convertView.findViewById(R.id.part);
+            holder.argsTextView = (TextView) convertView.findViewById(R.id.args);
+            holder.purposeTextView = (TextView) convertView.findViewById(R.id.purpose);
+            convertView.setTag(holder);
+            convertView.setClickable(false);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
-
-        TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.lblListItem);
-
-        txtListChild.setText(childText);
+        String[] childData = this.listDataChild.get(this.listDataHeader.get(groupPosition)).get(childPosition);
+        holder.partTextView.setText(childData[0]);
+        holder.argsTextView.setText(childData[1]);
+        holder.purposeTextView.setText(childData[2]);
         return convertView;
     }
 
@@ -87,9 +98,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                              View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this.context
+            LayoutInflater inflater = (LayoutInflater) this.context
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.main_list_item_group, null);
+            convertView = inflater.inflate(R.layout.ref_list_item_group, null);
         }
 
         TextView lblListHeader = (TextView) convertView
