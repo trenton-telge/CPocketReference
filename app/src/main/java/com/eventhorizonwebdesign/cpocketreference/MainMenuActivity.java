@@ -118,7 +118,6 @@ public class MainMenuActivity extends AppCompatActivity {
         List<String> reference = new ArrayList<>();
         reference.add("ASCII Table");
         reference.add("Primitive Types");
-        reference.add("Common Libraries");
         reference.add("Escape Characters");
         reference.add("Key Words");
         reference.add("Operators");
