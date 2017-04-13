@@ -46,20 +46,49 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataHeader.add("Narrow Characters");
                 listDataHeader.add("Wide Characters");
 
-                List<String[]> narrow = new ArrayList<>();
-                narrow.add(new String[]{"cin", "", "Standard input stream"});
-                narrow.add(new String[]{"cout", "", "Standard output stream"});
-                narrow.add(new String[]{"cerr", "", "Standard error output stream"});
-                narrow.add(new String[]{"clog", "", "Standard logging output stream"});
+                List<String[]> narrowio = new ArrayList<>();
+                narrowio.add(new String[]{"cin", "", "Standard input stream"});
+                narrowio.add(new String[]{"cout", "", "Standard output stream"});
+                narrowio.add(new String[]{"cerr", "", "Standard error output stream"});
+                narrowio.add(new String[]{"clog", "", "Standard logging output stream"});
 
-                List<String[]> wide = new ArrayList<>();
-                wide.add(new String[]{"wcin", "", "Standard input stream (wide)"});
-                wide.add(new String[]{"wcout", "", "Standard output stream (wide)"});
-                wide.add(new String[]{"wcerr", "", "Standard error output stream (wide)"});
-                wide.add(new String[]{"wclog", "", "Standard logging output stream (wide)"});
+                List<String[]> wideio = new ArrayList<>();
+                wideio.add(new String[]{"wcin", "", "Standard input stream (wide)"});
+                wideio.add(new String[]{"wcout", "", "Standard output stream (wide)"});
+                wideio.add(new String[]{"wcerr", "", "Standard error output stream (wide)"});
+                wideio.add(new String[]{"wclog", "", "Standard logging output stream (wide)"});
 
-                listDataChild.put(listDataHeader.get(0), narrow);
-                listDataChild.put(listDataHeader.get(1), wide);
+                listDataChild.put(listDataHeader.get(0), narrowio);
+                listDataChild.put(listDataHeader.get(1), wideio);
+                break;
+            case "fstream":
+                listDataHeader.add("Class Templates");
+                listDataHeader.add("Narrow Characters");
+                listDataHeader.add("Wide Characters");
+
+                List<String[]> templates = new ArrayList<>();
+                templates.add(new String[]{"basic_ifstream", "", "Input file stream template"});
+                templates.add(new String[]{"basic_ofstream", "", "Output file stream template"});
+                templates.add(new String[]{"basic_fstream", "", "File stream template"});
+                templates.add(new String[]{"basic_filebuf", "", "File stream buffer template"});
+
+                List<String[]> narrowf = new ArrayList<>();
+                narrowf.add(new String[]{"ifstream", "", "Input file stream"});
+                narrowf.add(new String[]{"ifstream", "", "Output file stream"});
+                narrowf.add(new String[]{"ifstream", "", "Input/Output file stream"});
+                narrowf.add(new String[]{"ifstream", "", "File stream buffer"});
+
+                List<String[]> widef = new ArrayList<>();
+                widef.add(new String[]{"ifstream", "", "Input file stream (wide)"});
+                widef.add(new String[]{"ifstream", "", "Output file stream (wide)"});
+                widef.add(new String[]{"ifstream", "", "Input/Output file stream (wide)"});
+                widef.add(new String[]{"ifstream", "", "File stream buffer (wide)"});
+
+                listDataChild.put(listDataHeader.get(0), templates);
+                listDataChild.put(listDataHeader.get(1), narrowf);
+                listDataChild.put(listDataHeader.get(2), widef);
+                break;
+            default:
                 break;
         }
     }
