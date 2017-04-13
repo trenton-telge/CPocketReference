@@ -188,6 +188,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                 other.add(new String[]{"fabs", "[double]", "Returns absolute value of argument"});
                 other.add(new String[]{"abs", "[double]", "Returns absolute value of argument"});
                 other.add(new String[]{"fma", "[double][double][double]", "Returns arg1*arg2+arg3"});
+
+                listDataChild.put(listDataHeader.get(0), trig);
+                listDataChild.put(listDataHeader.get(1), hyp);
+                listDataChild.put(listDataHeader.get(2), explog);
+                listDataChild.put(listDataHeader.get(3), power);
+                listDataChild.put(listDataHeader.get(4), errorgamma);
+                listDataChild.put(listDataHeader.get(5), roundremain);
+                listDataChild.put(listDataHeader.get(6), floatfunc);
+                listDataChild.put(listDataHeader.get(7), other);
             default:
 
                 break;
