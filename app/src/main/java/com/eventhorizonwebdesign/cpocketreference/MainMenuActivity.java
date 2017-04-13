@@ -89,6 +89,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     intent = new Intent(c, ReferenceListActivity.class);
                     intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
                     startActivity(intent);
+                    break;
                 case "Tutorials":
                     intent = new Intent(c, TutorialActivity.class);
                     intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
