@@ -80,6 +80,16 @@ public class MainMenuActivity extends AppCompatActivity {
                             intent = new Intent(c, PrimitiveListActivity.class);
                             startActivity(intent);
                             break;
+                        case "Escape Characters":
+                            //TODO link activity
+                            break;
+                        case "Keywords":
+                            intent = new Intent(c, KeywordListActivity.class);
+                            startActivity(intent);
+                            break;
+                        case "Operators":
+                            //TODO link activity
+                            break;
                         default:
                             //TODO throw error
                             break;
@@ -119,7 +129,7 @@ public class MainMenuActivity extends AppCompatActivity {
         reference.add("ASCII Table");
         reference.add("Primitive Types");
         reference.add("Escape Characters");
-        reference.add("Key Words");
+        reference.add("Keywords");
         reference.add("Operators");
 
         List<String> libraries = new ArrayList<>();

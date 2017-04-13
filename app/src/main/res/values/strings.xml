@@ -133,6 +133,7 @@
         <item>~</item>
         <item>DEL</item>
     </string-array>
+
     <string-array name="primitive_types">
         <item>bool</item>
         <item>char</item>
@@ -180,5 +181,164 @@
         <item>1.2E-38 to 3.4E+38</item>
         <item>2.3E-308 to 1.7E+308</item>
         <item>3.4E-4932 to 1.1E+4932</item>
+    </string-array>
+
+    <string-array name="keyword_names">
+        <item>and</item>
+        <item>and_eq</item>
+        <item>asm</item>
+        <item>auto</item>
+        <item>bitand</item>
+        <item>bitor</item>
+        <item>bool</item>
+        <item>break</item>
+        <item>case</item>
+        <item>catch</item>
+        <item>char</item>
+        <item>class</item>
+        <item>compl</item>
+        <item>const</item>
+        <item>const_cast</item>
+        <item>continue</item>
+        <item>default</item>
+        <item>#define</item>
+        <item>delete</item>
+        <item>do</item>
+        <item>double</item>
+        <item>dynamic_cast</item>
+        <item>else</item>
+        <item>enum</item>
+        <item>exit()</item>
+        <item>explicit</item>
+        <item>export</item>
+        <item>extern</item>
+        <item>extern "C"</item>
+        <item>false</item>
+        <item>float</item>
+        <item>for</item>
+        <item>friend</item>
+        <item>goto</item>
+        <item>if</item>
+        <item>inline</item>
+        <item>int</item>
+        <item>long</item>
+        <item>mutable</item>
+        <item>namespace</item>
+        <item>new</item>
+        <item>not</item>
+        <item>not_eq</item>
+        <item>operator</item>
+        <item>or</item>
+        <item>or_eq</item>
+        <item>private</item>
+        <item>protected</item>
+        <item>public</item>
+        <item>register</item>
+        <item>reinterpret_cast</item>
+        <item>short</item>
+        <item>signed</item>
+        <item>sizeof</item>
+        <item>static</item>
+        <item>static_cast</item>
+        <item>struct</item>
+        <item>switch</item>
+        <item>template</item>
+        <item>this</item>
+        <item>throw</item>
+        <item>true</item>
+        <item>try</item>
+        <item>typedef</item>
+        <item>typeid</item>
+        <item>typename</item>
+        <item>union</item>
+        <item>unsigned</item>
+        <item>using</item>
+        <item>virtual</item>
+        <item>void</item>
+        <item>volatile</item>
+        <item>void</item>
+        <item>wchar_t</item>
+        <item>while</item>
+        <item>xor</item>
+        <item>xor_eq</item>
+    </string-array>
+    <string-array name="keyword_defs">
+        <item>alternative to &amp;&amp; operator</item>
+        <item>alternative to &amp;= operator</item>
+        <item>insert an assembly instruction</item>
+        <item>declare a local variable, or we can let the compiler to deduce the type of the variable from the initialization.</item>
+        <item>alternative to bitwise &amp; operator</item>
+        <item>alternative to | operator</item>
+        <item>declare a boolean variable</item>
+        <item>break out of a loop</item>
+        <item>a block of code in a switch statement</item>
+        <item>handles exceptions from throw</item>
+        <item>declare a character variable</item>
+        <item>declare a class</item>
+        <item>alternative to ~ operator</item>
+        <item>declare immutable data or functions that do not change data</item>
+        <item>cast from const variables</item>
+        <item>bypass iterations of a loop</item>
+        <item>default handler in a case statement</item>
+        <item>All header files should have #define guards to prevent multiple inclusion.</item>
+        <item>make dynamic memory available</item>
+        <item>looping construct</item>
+        <item>declare a double precision floating-point variable</item>
+        <item>perform runtime casts</item>
+        <item>alternate case for an if statement</item>
+        <item>create enumeration types</item>
+        <item>ending a process</item>
+        <item>only use constructors when they exactly match</item>
+        <item>allows template definitions to be separated from their declarations</item>
+        <item>declares a variable or function and specifies that it has external linkage</item>
+        <item>enables C function call from C++ by forcing C-linkage</item>
+        <item>a constant representing the boolean false value</item>
+        <item>declare a floating-point variable</item>
+        <item>looping construct</item>
+        <item>grant non-member function access to private data</item>
+        <item>jump to a different part of the program</item>
+        <item>execute code based on the result of a test</item>
+        <item>optimize calls to short functions</item>
+        <item>declare an integer variable</item>
+        <item>declare a long integer variable</item>
+        <item>override a const variable</item>
+        <item>partition the global namespace by defining a scope</item>
+        <item>allocate dynamic memory for a new variable</item>
+        <item>alternative to ! operator</item>
+        <item>alternative to != operator</item>
+        <item>create overloaded operator functions</item>
+        <item>alternative to || operator</item>
+        <item>alternative to |= operator</item>
+        <item>declare private members of a class</item>
+        <item>declare protected members of a class</item>
+        <item>declare public members of a class</item>
+        <item>request that a variable be optimized for speed</item>
+        <item>change the type of a variable</item>
+        <item>declare a short integer variable</item>
+        <item>modify variable type declarations</item>
+        <item>return the size of a variable or type</item>
+        <item>create permanent storage for a variable</item>
+        <item>perform a nonpolymorphic cast</item>
+        <item>define a new structure</item>
+        <item>execute code based on different possible values for a variable</item>
+        <item>create generic functions</item>
+        <item>a pointer to the current object</item>
+        <item>throws an exception</item>
+        <item>a constant representing the boolean true value</item>
+        <item>execute code that can throw an exception</item>
+        <item>create a new type name from an existing type</item>
+        <item>describes an object</item>
+        <item>declare a class or undefined type</item>
+        <item>a structure that assigns multiple variables to the same memory location</item>
+        <item>declare an unsigned integer variable</item>
+        <item>import complete or partial namespaces into the current scope</item>
+        <item>create a function that can be overridden by a derived class</item>
+        <item>declare functions or data with no associated data type</item>
+        <item>warn the compiler about variables that can be modified unexpectedly</item>
+        <item>declare functions or data with no associated data type</item>
+        <item>declare a wide-character variable</item>
+        <item>looping construct</item>
+        <item>alternative to ^ operator</item>
+        <item>alternative to ^= operator</item>
     </string-array>
 </resources>
