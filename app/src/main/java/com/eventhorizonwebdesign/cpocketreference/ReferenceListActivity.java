@@ -74,21 +74,36 @@ public class ReferenceListActivity extends AppCompatActivity {
 
                 List<String[]> narrowf = new ArrayList<>();
                 narrowf.add(new String[]{"ifstream", "", "Input file stream"});
-                narrowf.add(new String[]{"ifstream", "", "Output file stream"});
-                narrowf.add(new String[]{"ifstream", "", "Input/Output file stream"});
-                narrowf.add(new String[]{"ifstream", "", "File stream buffer"});
+                narrowf.add(new String[]{"ofstream", "", "Output file stream"});
+                narrowf.add(new String[]{"fstream", "", "Input/Output file stream"});
+                narrowf.add(new String[]{"filebuf", "", "File stream buffer"});
 
                 List<String[]> widef = new ArrayList<>();
-                widef.add(new String[]{"ifstream", "", "Input file stream (wide)"});
-                widef.add(new String[]{"ifstream", "", "Output file stream (wide)"});
-                widef.add(new String[]{"ifstream", "", "Input/Output file stream (wide)"});
-                widef.add(new String[]{"ifstream", "", "File stream buffer (wide)"});
+                widef.add(new String[]{"wifstream", "", "Input file stream (wide)"});
+                widef.add(new String[]{"wofstream", "", "Output file stream (wide)"});
+                widef.add(new String[]{"wfstream", "", "Input/Output file stream (wide)"});
+                widef.add(new String[]{"wfilebuf", "", "File stream buffer (wide)"});
 
                 listDataChild.put(listDataHeader.get(0), templates);
                 listDataChild.put(listDataHeader.get(1), narrowf);
                 listDataChild.put(listDataHeader.get(2), widef);
                 break;
             default:
+                listDataHeader.add("IO Manipulators");
+
+                List<String[]> manipulators = new ArrayList<>();
+                manipulators.add(new String[]{"setiosflags", "[Mask]", "Set specified format flags"});
+                manipulators.add(new String[]{"resetiosflags", "[Mask]", "Reset specified format flags"});
+                manipulators.add(new String[]{"setbase", "[Base]", "Set basefield flag"});
+                manipulators.add(new String[]{"setfill", "[char]", "Set fill character"});
+                manipulators.add(new String[]{"setprecision", "[int]", "Set decimal precision"});
+                manipulators.add(new String[]{"setw", "[int]", "Set field width"});
+                manipulators.add(new String[]{"get_money", "[float || double || long double]", "Gets monetary value to argument"});
+                manipulators.add(new String[]{"put_money", "[long double]", "Inserts monetary representation of argument"});
+                manipulators.add(new String[]{"get_time", "[struct tm][string]", "Gets time value to struct argument"});
+                manipulators.add(new String[]{"put_time", "[struct tm][string]", "Inserts time representation of struct argument"});
+
+                listDataChild.put(listDataHeader.get(0), manipulators);
                 break;
         }
     }
