@@ -22,14 +22,14 @@ public class TutorialActivity extends AppCompatActivity {
         TextView tutorialLoaderView = (TextView) findViewById(R.id.tutorial_text);
         Intent intent = getIntent();
         String t = intent.getStringExtra("t");
-        String programCode = "";
+        String programCode;
         switch(t){
             case "Hello World":
                 try {
                     Resources res = getResources();
                     InputStream in_s = res.openRawResource(R.raw.hello_world);
                     BufferedReader b = new BufferedReader(new InputStreamReader(in_s, "UTF-8"));
-                    StringBuffer stringBuffer = new StringBuffer();
+                    StringBuilder stringBuffer = new StringBuilder();
                     String line;
                     while((line =b.readLine())!=null){
                         stringBuffer.append(line).append("\n");

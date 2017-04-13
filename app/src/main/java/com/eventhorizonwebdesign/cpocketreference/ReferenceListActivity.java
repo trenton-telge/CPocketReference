@@ -1,14 +1,10 @@
 package com.eventhorizonwebdesign.cpocketreference;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
-import com.eventhorizonwebdesign.cpocketreference.adapters.ExpandableListAdapter;
 import com.eventhorizonwebdesign.cpocketreference.adapters.ReferenceListAdapter;
 
 import java.util.ArrayList;
@@ -32,7 +28,6 @@ public class ReferenceListActivity extends AppCompatActivity {
         prepareListData(t);
         listAdapter = new ReferenceListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
-        final Context c = this.getApplicationContext();
 
     }
 

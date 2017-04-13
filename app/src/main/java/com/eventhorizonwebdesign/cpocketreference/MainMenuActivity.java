@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 
@@ -56,55 +55,50 @@ public class MainMenuActivity extends AppCompatActivity {
         // This line just sets the list adapter
         final Context c = this.getApplicationContext();
 
-        expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+        expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
 
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-
-                // TODO debug toast only. Delete for prod.
-                Toast.makeText(
-                        getApplicationContext(),
-                        listDataHeader.get(groupPosition)
-                                + " : "
-                                + listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition), Toast.LENGTH_SHORT)
-                        .show();
-                Intent intent;
-                switch(listDataHeader.get(groupPosition)){
-                    case "Reference":
-                        switch(listDataChild.get(
-                                listDataHeader.get(groupPosition)).get(
-                                childPosition)){
-                            case "ASCII Table":
-                                intent = new Intent(c, ASCIIListActivity.class);
-                                startActivity(intent);
-                                break;
-                            case "Primitive Types":
-                                intent = new Intent(c, PrimitiveListActivity.class);
-                                startActivity(intent);
-                                break;
-                            default:
-                                //TODO throw error
-                                break;
-                        }
-                        break;
-                    case "Libraries":
-                        intent = new Intent(c, ReferenceListActivity.class);
-                        intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
-                        startActivity(intent);
-                    case "Tutorials":
-                        intent = new Intent(c, TutorialActivity.class);
-                        intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
-                        startActivity(intent);
-                        break;
-                    default:
-                        //TODO Throw error
-                        break;
-                }
-                return false;
+            // TODO debug toast only. Delete for prod.
+            Toast.makeText(
+                    getApplicationContext(),
+                    listDataHeader.get(groupPosition)
+                            + " : "
+                            + listDataChild.get(
+                            listDataHeader.get(groupPosition)).get(
+                            childPosition), Toast.LENGTH_SHORT)
+                    .show();
+            Intent intent;
+            switch(listDataHeader.get(groupPosition)){
+                case "Reference":
+                    switch(listDataChild.get(
+                            listDataHeader.get(groupPosition)).get(
+                            childPosition)){
+                        case "ASCII Table":
+                            intent = new Intent(c, ASCIIListActivity.class);
+                            startActivity(intent);
+                            break;
+                        case "Primitive Types":
+                            intent = new Intent(c, PrimitiveListActivity.class);
+                            startActivity(intent);
+                            break;
+                        default:
+                            //TODO throw error
+                            break;
+                    }
+                    break;
+                case "Libraries":
+                    intent = new Intent(c, ReferenceListActivity.class);
+                    intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
+                    startActivity(intent);
+                case "Tutorials":
+                    intent = new Intent(c, TutorialActivity.class);
+                    intent.putExtra("t", listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition));
+                    startActivity(intent);
+                    break;
+                default:
+                    //TODO Throw error
+                    break;
             }
+            return false;
         });
     }
 
@@ -149,11 +143,6 @@ public class MainMenuActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(2), tutorials);
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
 
     // Used to load the 'native-lib' library on application startup.
     static {
