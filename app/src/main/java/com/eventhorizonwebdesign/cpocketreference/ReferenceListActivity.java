@@ -98,13 +98,96 @@ public class ReferenceListActivity extends AppCompatActivity {
                 manipulators.add(new String[]{"setfill", "[char]", "Set fill character"});
                 manipulators.add(new String[]{"setprecision", "[int]", "Set decimal precision"});
                 manipulators.add(new String[]{"setw", "[int]", "Set field width"});
-                manipulators.add(new String[]{"get_money", "[float || double || long double]", "Gets monetary value to argument"});
+                manipulators.add(new String[]{"get_money", "[long double]", "Gets monetary value to argument"});
                 manipulators.add(new String[]{"put_money", "[long double]", "Inserts monetary representation of argument"});
                 manipulators.add(new String[]{"get_time", "[struct tm][string]", "Gets time value to struct argument"});
                 manipulators.add(new String[]{"put_time", "[struct tm][string]", "Inserts time representation of struct argument"});
 
                 listDataChild.put(listDataHeader.get(0), manipulators);
                 break;
+            case "cmath":
+                listDataHeader.add("Trig Functions");
+                listDataHeader.add("Hyperbolic Functions");
+                listDataHeader.add("Exponential and Log Functions");
+                listDataHeader.add("Power Functions");
+                listDataHeader.add("Error and Gamma Functions");
+                listDataHeader.add("Rounding and Remainder Functions");
+                listDataHeader.add("Floating-point Functions");
+                listDataHeader.add("Other Functions");
+                // TODO listDataHeader.add("Macros");
+
+                List<String[]> trig = new ArrayList<>();
+                trig.add(new String[]{"cos", "[double]", "Returns radian cosine of argument"});
+                trig.add(new String[]{"sin", "[double]", "Returns radian sine of argument"});
+                trig.add(new String[]{"tan", "[double]", "Returns radian tangent of argument"});
+                trig.add(new String[]{"acos", "[double]", "Returns radian arc cosine of argument"});
+                trig.add(new String[]{"asin", "[double]", "Returns radian arc sine of argument"});
+                trig.add(new String[]{"atan", "[double]", "Returns radian arc tangent of argument"});
+                trig.add(new String[]{"atan2", "[double][double]", "Returns radian arc tangent of arg2/arg1"});
+
+                List<String[]> hyp = new ArrayList<>();
+                hyp.add(new String[]{"cosh", "[double]", "Returns hyperbolic cosine of argument"});
+                hyp.add(new String[]{"sinh", "[double]", "Returns hyperbolic sine of argument"});
+                hyp.add(new String[]{"tanh", "[double]", "Returns hyperbolic tangent of argument"});
+                hyp.add(new String[]{"acosh", "[double]", "Returns hyperbolic arc cosine of argument"});
+                hyp.add(new String[]{"asinh", "[double]", "Returns hyperbolic arc sine of argument"});
+                hyp.add(new String[]{"atanh", "[double]", "Returns hyperbolic arc tangent of argument"});
+
+                List<String[]> explog = new ArrayList<>();
+                explog.add(new String[]{"exp", "[double]", "Returns eˣ"});
+                explog.add(new String[]{"frexp", "[double][&double]", "Returns binary significand of arg1"});
+                explog.add(new String[]{"ldexp", "[double][double]", "Returns arg1 * 2ᵃʳᵍ²"});
+                explog.add(new String[]{"log", "[double]", "Returns natural log of argument"});
+                explog.add(new String[]{"log10", "[double]", "Returns common log of argument"});
+                explog.add(new String[]{"modf", "[double][&double]", "Returns the fractional part of arg1"});
+                explog.add(new String[]{"exp2", "[double]", "Returns 2ˣ"});
+                explog.add(new String[]{"expm1", "[double]", "Returns eˣ-1"});
+                explog.add(new String[]{"ilogb", "[double]", "Returns the integral part of the logarithm of |x|"});
+                explog.add(new String[]{"log1p", "[double]", "Returns the natural log of 1+x"});
+                explog.add(new String[]{"logb", "[double]", "Returns the natural log of |x|"});
+                explog.add(new String[]{"scalbn", "[double][double]", "Returns arg1 * FLT_RADIXᵃʳᵍ²"});
+                explog.add(new String[]{"scalbln", "[long double][long double]", "Returns arg1 * FLT_RADIXᵃʳᵍ²"});
+
+                List<String[]> power = new ArrayList<>();
+                power.add(new String[]{"pow", "[double][double]", "Returns arg1ᵃʳᵍ²"});
+                power.add(new String[]{"sqrt", "[double]", "Returns the square root of the argument"});
+                power.add(new String[]{"cbrt", "[double]", "Returns the cube root of the argument"});
+                power.add(new String[]{"hypot", "[double][double]", "Returns the hypotenuse from two given legs"});
+
+                List<String[]> errorgamma = new ArrayList<>();
+                errorgamma.add(new String[]{"erf", "[double]", "Returns the error function of x"});
+                errorgamma.add(new String[]{"erfc", "[double]", "Returns the complementary error function of x"});
+                errorgamma.add(new String[]{"tgamma", "[double]", "Returns the gamma function of x"});
+                errorgamma.add(new String[]{"lgamma", "[double]", "Returns log(abs(tgamma(x)))"});
+
+                List<String[]> roundremain = new ArrayList<>();
+                roundremain.add(new String[]{"ceil", "[double]", "Rounds the argument upward"});
+                roundremain.add(new String[]{"floor", "[double]", "Rounds the argument downward"});
+                roundremain.add(new String[]{"fmod", "[double][double]", "Returns the remainder of arg1/arg2"});
+                roundremain.add(new String[]{"trunc", "[double]", "Truncates argument to a whole number"});
+                roundremain.add(new String[]{"round", "[double]", "Rounds the argument to nearest integer"});
+                roundremain.add(new String[]{"lround", "[double]", "Returns rounded long int"});
+                roundremain.add(new String[]{"llround", "[double]", "Returns rounded long long int"});
+                roundremain.add(new String[]{"rint", "[double]", "Rounds x to an integral value"});
+                roundremain.add(new String[]{"lrint", "[double]", "Returns long int rounded to an integral value"});
+                roundremain.add(new String[]{"llrint", "[double]", "Returns long long int rounded to an integral value"});
+                roundremain.add(new String[]{"nearbyint", "[double]", "Rounds x to an integral value"});
+                roundremain.add(new String[]{"remainder", "[double][double]", "Returns rounded remainder of arg1/arg2"});
+                roundremain.add(new String[]{"remquo", "[double][double][&int]", "Returns same as remainder() in int arg"});
+
+                List<String[]> floatfunc = new ArrayList<>();
+                floatfunc.add(new String[]{"copysign", "[double][double]", "Returns arg1 with sign of arg2"});
+                floatfunc.add(new String[]{"nan", "", "Returns NaN double"});
+                floatfunc.add(new String[]{"nextafter", "[double][double]", "Returns the next valid value after arg1 near arg2"});
+                floatfunc.add(new String[]{"nexttoward", "[double][long double]", "Same as nextafter with a long double arg2"});
+
+                List<String[]> other = new ArrayList<>();
+                other.add(new String[]{"fdim", "[double][double]", "Returns positive difference of arguments"});
+                other.add(new String[]{"fmax", "[double][double]", "Returns larger of two arguments"});
+                other.add(new String[]{"fmin", "[double][double]", "Retuns smaller of two arguments"});
+                other.add(new String[]{"fabs", "[double]", "Returns absolute value of argument"});
+                other.add(new String[]{"abs", "[double]", "Returns absolute value of argument"});
+                other.add(new String[]{"fma", "[double][double][double]", "Returns arg1*arg2+arg3"});
             default:
 
                 break;
