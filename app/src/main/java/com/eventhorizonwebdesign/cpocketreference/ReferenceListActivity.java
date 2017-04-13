@@ -88,7 +88,7 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(1), narrowf);
                 listDataChild.put(listDataHeader.get(2), widef);
                 break;
-            default:
+            case "iomanip":
                 listDataHeader.add("IO Manipulators");
 
                 List<String[]> manipulators = new ArrayList<>();
@@ -104,6 +104,9 @@ public class ReferenceListActivity extends AppCompatActivity {
                 manipulators.add(new String[]{"put_time", "[struct tm][string]", "Inserts time representation of struct argument"});
 
                 listDataChild.put(listDataHeader.get(0), manipulators);
+                break;
+            default:
+
                 break;
         }
     }
