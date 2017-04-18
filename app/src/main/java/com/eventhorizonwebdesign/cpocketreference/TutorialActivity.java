@@ -27,7 +27,10 @@ public class TutorialActivity extends AppCompatActivity {
             case "Hello World":
                 tutorialView.loadUrl("file:///android_asset/hello_world.html");
                 break;
+            case "Statements":
+                tutorialView.loadUrl("file:///android_asset/statements.html");
             default:
+                //TODO make this not fail silently
                 break;
         }
     }
