@@ -22,7 +22,6 @@ public class KeywordListActivity extends AppCompatActivity {
         prepareListData();
         keywordListAdapter = new KeywordListAdapter(this, content);
         keywordListView.setAdapter(keywordListAdapter);
-        keywordListView.addHeaderView(getLayoutInflater().inflate(R.layout.ascii_list_item_header, keywordListView, false));
     }
 
     private void prepareListData() {
