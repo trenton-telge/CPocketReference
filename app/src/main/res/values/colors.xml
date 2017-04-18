@@ -12,5 +12,6 @@
     <color name="colorArgument">#FFC107</color>
     <color name="colorStrings">#03a9f4</color>
     <color name="colorBool">#9C27B0</color>
+    <color name="colorOperator">#F44336</color>
 
 </resources>
