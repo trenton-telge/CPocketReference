@@ -25,6 +25,7 @@ public class KeywordListActivity extends AppCompatActivity {
     }
 
     private void prepareListData() {
+        content = new String[2][getResources().getStringArray(R.array.keyword_names).length];
         content[0] = getResources().getStringArray(R.array.keyword_names);
         content[1] = getResources().getStringArray(R.array.keyword_defs);
     }

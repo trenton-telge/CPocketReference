@@ -22,7 +22,7 @@ public class KeywordListAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return content.length;
+        return content[0].length;
     }
 
     @Override
@@ -53,8 +53,8 @@ public class KeywordListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        holder.keyword.setText(content[position][0]);
-        holder.desc.setText(content[position][1]);
+        holder.keyword.setText(content[0][position]);
+        holder.desc.setText(content[1][position]);
         return convertView;
     }
 }

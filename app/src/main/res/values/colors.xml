@@ -8,10 +8,12 @@
 
     <!--Code Highlighting in UI-->
     <color name="colorKeyword">#ff530d</color>
-    <color name="colorFunction">#03a9f4</color>
+    <color name="colorProgrammerDefined">#03a9f4</color>
     <color name="colorArgument">#FFC107</color>
-    <color name="colorStrings">#03a9f4</color>
+    <color name="colorStrings">#3f51b5</color>
     <color name="colorBool">#9C27B0</color>
     <color name="colorOperator">#F44336</color>
+    <color name="colorPreProcessor">#4CAF50</color>
+    <color name="colorComment">#696969</color>
 
 </resources>
