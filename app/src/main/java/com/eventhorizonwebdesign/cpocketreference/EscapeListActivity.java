@@ -9,8 +9,8 @@ import com.eventhorizonwebdesign.cpocketreference.adapters.EscapeListAdapter;
 
 public class EscapeListActivity extends AppCompatActivity {
 
-    ListView operatorsListView;
-    ListAdapter operatorsListAdapter;
+    ListView escapeListView;
+    ListAdapter escapeListAdapter;
     String[] escapeCharsList;
     String[] escapeEquivalentsList;
 
@@ -19,10 +19,10 @@ public class EscapeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escapes_list);
 
-        operatorsListView = (ListView) findViewById(R.id.ascii_table);
+        escapeListView = (ListView) findViewById(R.id.escape_list);
         prepareListData();
-        operatorsListAdapter = new EscapeListAdapter(this, escapeCharsList, escapeEquivalentsList);
-        operatorsListView.setAdapter(operatorsListAdapter);
+        escapeListAdapter = new EscapeListAdapter(this, escapeCharsList, escapeEquivalentsList);
+        escapeListView.setAdapter(escapeListAdapter);
     }
 
     private void prepareListData(){

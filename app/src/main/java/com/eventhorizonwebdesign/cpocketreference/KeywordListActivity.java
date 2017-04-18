@@ -18,7 +18,7 @@ public class KeywordListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_keyword_list);
 
-        keywordListView = (ListView) findViewById(R.id.ascii_table);
+        keywordListView = (ListView) findViewById(R.id.keywords_list);
         prepareListData();
         keywordListAdapter = new KeywordListAdapter(this, content);
         keywordListView.setAdapter(keywordListAdapter);
@@ -26,7 +26,6 @@ public class KeywordListActivity extends AppCompatActivity {
     }
 
     private void prepareListData() {
-        //TODO fill content
         content[0] = getResources().getStringArray(R.array.keyword_names);
         content[1] = getResources().getStringArray(R.array.keyword_defs);
     }
