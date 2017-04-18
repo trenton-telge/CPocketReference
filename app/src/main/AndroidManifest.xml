@@ -21,7 +21,8 @@
         <activity android:name=".TutorialActivity" />
         <activity android:name=".ReferenceListActivity" />
         <activity android:name=".KeywordListActivity" />
-        <activity android:name=".EscapeListActivity"></activity>
+        <activity android:name=".EscapeListActivity" />
+        <activity android:name=".OperatorListActivity"></activity>
     </application>
 
 </manifest>
