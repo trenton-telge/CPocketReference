@@ -81,7 +81,8 @@ public class MainMenuActivity extends AppCompatActivity {
                             startActivity(intent);
                             break;
                         case "Escape Characters":
-                            //TODO link activity
+                            intent = new Intent(c, EscapeListActivity.class);
+                            startActivity(intent);
                             break;
                         case "Keywords":
                             intent = new Intent(c, KeywordListActivity.class);

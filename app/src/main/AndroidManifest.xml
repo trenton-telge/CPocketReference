@@ -20,7 +20,8 @@
         <activity android:name=".PrimitiveListActivity" />
         <activity android:name=".TutorialActivity" />
         <activity android:name=".ReferenceListActivity" />
-        <activity android:name=".KeywordListActivity"></activity>
+        <activity android:name=".KeywordListActivity" />
+        <activity android:name=".EscapeListActivity"></activity>
     </application>
 
 </manifest>

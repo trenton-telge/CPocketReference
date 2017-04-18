@@ -341,4 +341,41 @@
         <item>alternative to ^ operator</item>
         <item>alternative to ^= operator</item>
     </string-array>
+
+    <string-array name="escape_chars">
+        <item>\\n</item>
+        <item>\\t</item>
+        <item>\\v</item>
+        <item>\\b</item>
+        <item>\\\\</item>
+        <item>//</item>
+        <item>/* */</item>
+        <item>\\0l</item>
+        <item>\\f</item>
+        <item>\\r</item>
+        <item>\\\'</item>
+        <item>\\\"</item>
+        <item>\\ooo</item>
+        <item>\\xhhh</item>
+        <item>\\uxxxx</item>
+        <item>\\Uxxxxxxxx</item>
+    </string-array>
+    <string-array name="escape_equivalents">
+        <item>New Line</item>
+        <item>Horizontal Tab</item>
+        <item>Vertical Tab</item>
+        <item>Backspace</item>
+        <item>Backslash</item>
+        <item>Comment (For 1 Line)</item>
+        <item>Comments For Multiple Lines</item>
+        <item>Null</item>
+        <item>Form Feed</item>
+        <item>Carriage Return</item>
+        <item>Single Quote</item>
+        <item>Double Quote</item>
+        <item>Octal</item>
+        <item>Hexadecimal</item>
+        <item>Unicode (UTF-8)</item>
+        <item>Unicode (UTF-16)</item>
+    </string-array>
 </resources>
