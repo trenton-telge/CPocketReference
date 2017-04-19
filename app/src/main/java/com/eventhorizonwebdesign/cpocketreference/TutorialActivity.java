@@ -35,6 +35,7 @@ public class TutorialActivity extends AppCompatActivity {
             case "Conditionals":
                 break;
             case "For Loop":
+                tutorialView.loadUrl("file:///android_asset/for_loop.html");
                 break;
             case "While Loop":
                 break;
