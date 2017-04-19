@@ -139,6 +139,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("iomanip");
         libraries.add("cmath");
         libraries.add("ctime");
+        libraries.add("cctype");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");

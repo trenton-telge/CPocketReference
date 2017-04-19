@@ -213,6 +213,31 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(0), timeManipulation);
                 listDataChild.put(listDataHeader.get(1), timeConversion);
                 break;
+            case "cctype":
+                listDataHeader.add("Character Classification");
+                listDataHeader.add("Character Conversion");
+
+                List<String[]> charClass = new ArrayList<>();
+                charClass.add(new String[]{"isalnum", "[(int)char]", "Returns true if arg is alphanumeric, false otherwise"});
+                charClass.add(new String[]{"isalpha", "[(int)char]", "Returns true if arg is alphabetic, false otherwise"});
+                charClass.add(new String[]{"isblank", "[(int)char]", "Returns true if arg is a space or tab, fase otherwise"});
+                charClass.add(new String[]{"iscntrl", "[(int)char]", "Returns true if arg is a control character, false otherwise"});
+                charClass.add(new String[]{"isdigit", "[(int)char]", "Returns true if arg is a digit, false otherwise"});
+                charClass.add(new String[]{"isgraph", "[(int)char]", "Returns true if arg has a grapical representation, false otherwise"});
+                charClass.add(new String[]{"islower", "[(int)char]", "Returns true if arg is a lowercase letter, false otherwise"});
+                charClass.add(new String[]{"isprint", "[(int)char]", "Returns true if arg is printable, false otherwise"});
+                charClass.add(new String[]{"ispunct", "[(int)char]", "Returns true if arg is punctuation, false otherwise"});
+                charClass.add(new String[]{"isspace", "[(int)char]", "Returns true of arg is a whitespace character, false otherwise"});
+                charClass.add(new String[]{"isupper", "[(int)char]", "Returns true if arg is an uppercase letter, false otherwise"});
+                charClass.add(new String[]{"isxdigit", "[(int)char]", "Returns true of arg is a hexadecimal digit, false otherwise"});
+
+                List<String[]> charConv = new ArrayList<>();
+                charConv.add(new String[]{"tolower", "[(int)char]", "Returns the lowercase representation of arg"});
+                charConv.add(new String[]{"toupper", "[(int)char]", "Returns the uppercase representation of arg"});
+
+                listDataChild.put(listDataHeader.get(0), charClass);
+                listDataChild.put(listDataHeader.get(1), charConv);
+                break;
             default:
 
                 break;
