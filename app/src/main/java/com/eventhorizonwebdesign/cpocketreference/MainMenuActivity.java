@@ -145,7 +145,10 @@ public class MainMenuActivity extends AppCompatActivity {
         tutorials.add("Hello World");
         tutorials.add("Writing Statements");
         tutorials.add("Writing Expressions");
-        tutorials.add("Loops");
+        tutorials.add("Conditionals");
+        tutorials.add("For Loop");
+        tutorials.add("While Loop");
+        tutorials.add("Do-While Loop");
         tutorials.add("Functions");
         tutorials.add("Encapsulation");
 

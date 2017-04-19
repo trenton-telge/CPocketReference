@@ -32,7 +32,13 @@ public class TutorialActivity extends AppCompatActivity {
                 break;
             case "Writing Expressions":
                 break;
-            case "Loops":
+            case "Conditionals":
+                break;
+            case "For Loop":
+                break;
+            case "While Loop":
+                break;
+            case "Do-While Loop":
                 break;
             case "Functions":
                 break;
