@@ -138,6 +138,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("fstream");
         libraries.add("iomanip");
         libraries.add("cmath");
+        libraries.add("ctime");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");
