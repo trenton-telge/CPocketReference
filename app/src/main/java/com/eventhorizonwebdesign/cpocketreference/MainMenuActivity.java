@@ -148,7 +148,6 @@ public class MainMenuActivity extends AppCompatActivity {
         tutorials.add("Loops");
         tutorials.add("Functions");
         tutorials.add("Encapsulation");
-        tutorials.add("Objects");
 
         // Add links to HashMap
         listDataChild.put(listDataHeader.get(0), reference); // Header, Child data

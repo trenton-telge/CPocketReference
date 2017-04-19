@@ -29,6 +29,15 @@ public class TutorialActivity extends AppCompatActivity {
                 break;
             case "Writing Statements":
                 tutorialView.loadUrl("file:///android_asset/statements.html");
+                break;
+            case "Writing Expressions":
+                break;
+            case "Loops":
+                break;
+            case "Functions":
+                break;
+            case "Encapsulation":
+                break;
             default:
                 //TODO make this not fail silently
                 break;
