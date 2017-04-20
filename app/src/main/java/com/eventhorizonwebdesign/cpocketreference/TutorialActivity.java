@@ -8,6 +8,8 @@ import android.text.Html;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.eventhorizonwebdesign.cpocketreference.util.UnexpectedInputException;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,6 +40,7 @@ public class TutorialActivity extends AppCompatActivity {
                 tutorialView.loadUrl("file:///android_asset/for_loop.html");
                 break;
             case "While Loop":
+                tutorialView.loadUrl("file:///android_asset/while_loop.html");
                 break;
             case "Do-While Loop":
                 break;
@@ -46,7 +49,11 @@ public class TutorialActivity extends AppCompatActivity {
             case "Encapsulation":
                 break;
             default:
-                //TODO make this not fail silently
+                try{
+                    throw new UnexpectedInputException();
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
                 break;
         }
     }
