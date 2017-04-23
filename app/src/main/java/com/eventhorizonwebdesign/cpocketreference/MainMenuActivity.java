@@ -89,7 +89,8 @@ public class MainMenuActivity extends AppCompatActivity {
                             startActivity(intent);
                             break;
                         case "Operators":
-                            //TODO link activity
+                            intent = new Intent(c, OperatorListActivity.class);
+                            startActivity(intent);
                             break;
                         default:
                             //TODO throw error
