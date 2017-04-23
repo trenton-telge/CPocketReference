@@ -33,8 +33,10 @@ public class TutorialActivity extends AppCompatActivity {
                 tutorialView.loadUrl("file:///android_asset/statements.html");
                 break;
             case "Writing Expressions":
+                tutorialView.loadUrl("file:///android_asset/expressions.html");
                 break;
             case "Conditionals":
+                tutorialView.loadUrl("file:///android_asset/conditionals.html");
                 break;
             case "For Loop":
                 tutorialView.loadUrl("file:///android_asset/for_loop.html");
@@ -43,6 +45,7 @@ public class TutorialActivity extends AppCompatActivity {
                 tutorialView.loadUrl("file:///android_asset/while_loop.html");
                 break;
             case "Do-While Loop":
+                tutorialView.loadUrl("file:///android_asset/do_while_loop.html");
                 break;
             case "Functions":
                 break;

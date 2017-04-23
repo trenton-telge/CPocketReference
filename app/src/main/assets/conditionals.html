@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html style="padding:0; margin:0;">
+
+<head> </head>
+
+<body style="padding:0; margin:0;">
+    <div style="width:100%; min-width:100%; padding:0; margin:0;"> <span style='color:#696969; '>// Preprocessor directive </span>
+        <br /> <span style='color:#4CAF50; '>#include &lt;iostream&gt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Standard namespace </span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>using namespace</span> <span style='color:#03a9f4; '>std</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Instantiate the main function</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>main()</span>
+        <br /> <span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Declare a char to hold user input</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>char</span> <span style='color:#03a9f4;'>age</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Displays message asking for user input.</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#3f51b5; '>"Prices on our buffet varies by age. Please select your age range.</span><span style='color:#f44336; '>\n</span><span style='color:#3f51b5; '>"</span> <span style='color:#f44336; '>&lt;&lt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Choice 1</span>
+        <br /> <span style='color:##3f51b5; '>"1. Under 12 Years Old</span><span style='color:#f44336; '>\n</span><span style='color:##3f51b5; '>"</span> <span style='color:#f44336; '>&lt;&lt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Choice 2</span>
+        <br /> <span style='color:##3f51b5; '>"2. 13 Years And Older</span><span style='color:#f44336; '>\n</span><span style='color:#3f51b5; '>"</span> <span style='color:#f44336; '>&lt;&lt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Choice 3</span>
+        <br /> <span style='color:##3f51b5; '>"3. 18 Years And Older</span><span style='color:#f44336; '>\n</span><span style='color:#3f51b5; '>"</span> <span style='color:#f44336; '>&lt;&lt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Choice 4</span>
+        <br /> <span style='color:##3f51b5; '>"4. 60 Years And Older</span><span style='color:#f44336; '>\n</span><span style='color:#3f51b5; '>"</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Saves user input to age variable</span>
+        <br /> <span style='color:#603000; '>cin</span> <span style='color:#f44336; '>&gt;&gt;</span> <span style='color:#03a9f4;'>age</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display Message</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"You are a(n) "</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /><span style='color:#696969; '>//Switch Statement</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>switch</span> <span style='color:#f44336; '>(</span><span style='color:#03a9f4;'>age</span><span style='color:#f44336; '>)</span> <span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display Message if Selected Choice 1</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>case </span><span style='color:#0000e6; '>'1'</span><span style='color:#e34adc; '>:</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"Child. The price will be $5.99"</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display Message if Selected Choice 2</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>case </span><span style='color:#0000e6; '>'2'</span><span style='color:#e34adc; '>:</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"Teenager. The price will be $14.99"</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display Message if Selected Choice 3</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>case </span><span style='color:#0000e6; '>'3'</span><span style='color:#e34adc; '>:</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"Adult. The price will be $12.99"</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display Message if Selected Choice 4</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>case </span><span style='color:#0000e6; '>'4'</span><span style='color:#e34adc; '>:</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"Senior. The price will be $8.99"</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Display message if selected choice is not listed</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>default</span><span style='color:#e34adc; '>:</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:##3f51b5; '>"This is not a valid option."</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>break</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Exit switch conditional</span>
+        <br /> <span style='color:#800080; '>}</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Return status 0 from main function</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>return</span> <span style='color:#9C27B0; '>0</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#800080; '>}</span> </div>
+    <p style="background-color:black; font-family:monospace; color:#979797; padding:5px; padding-left:10px; padding-right:10px; margin:0; margin-top:10px;"> 0
+        <br /> Prices on our buffet varies by age. Please select your age range.
+        <br /> 1. Under 12 Years Old
+        <br /> 2. 13 Years And Older
+        <br /> 3. 18 Years And Older
+        <br /> 4. 60 Years And Older
+        <br /> <span style='color:03a9f4;'>2</span>
+        <br /> Teenager. The price will be $14.99
+        <br />main exited status 0. </p>
+</body>
+
+</html>
