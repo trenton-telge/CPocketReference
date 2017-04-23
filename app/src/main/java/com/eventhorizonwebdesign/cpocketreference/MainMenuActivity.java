@@ -53,16 +53,23 @@ public class MainMenuActivity extends AppCompatActivity {
 
         expListView.setAdapter(listAdapter);
         // This line just sets the list adapter
+
+        // Context includes saved states and files linked in the Android manifest. This line creates a context that can be passed to other functions.
         final Context c = this.getApplicationContext();
 
+        // onChildClick listener set on main ListView, pointing to an anonymous inner function
         expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
+            // Declare an intent to change Activities
             Intent intent;
+            // Switch on parent of child that was clicked on
             switch(listDataHeader.get(groupPosition)){
                 case "Reference":
+                    //Switch on child
                     switch(listDataChild.get(
                             listDataHeader.get(groupPosition)).get(
                             childPosition)){
                         case "ASCII Table":
+                            // Fire intent to new Activity
                             intent = new Intent(c, ASCIIListActivity.class);
                             startActivity(intent);
                             break;
