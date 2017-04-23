@@ -56,16 +56,6 @@ public class MainMenuActivity extends AppCompatActivity {
         final Context c = this.getApplicationContext();
 
         expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
-
-            // TODO debug toast only. Delete for prod.
-            Toast.makeText(
-                    getApplicationContext(),
-                    listDataHeader.get(groupPosition)
-                            + " : "
-                            + listDataChild.get(
-                            listDataHeader.get(groupPosition)).get(
-                            childPosition), Toast.LENGTH_SHORT)
-                    .show();
             Intent intent;
             switch(listDataHeader.get(groupPosition)){
                 case "Reference":
@@ -93,7 +83,7 @@ public class MainMenuActivity extends AppCompatActivity {
                             startActivity(intent);
                             break;
                         default:
-                            //TODO throw error
+                            Toast.makeText(getApplicationContext(), "An unexpected error occurred.", Toast.LENGTH_SHORT).show();
                             break;
                     }
                     break;
@@ -108,7 +98,7 @@ public class MainMenuActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 default:
-                    //TODO Throw error
+                    Toast.makeText(getApplicationContext(), "An unexpected error occurred.", Toast.LENGTH_SHORT).show();
                     break;
             }
             return false;
