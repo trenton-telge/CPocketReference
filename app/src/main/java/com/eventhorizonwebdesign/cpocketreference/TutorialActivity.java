@@ -48,6 +48,7 @@ public class TutorialActivity extends AppCompatActivity {
                 tutorialView.loadUrl("file:///android_asset/do_while_loop.html");
                 break;
             case "Functions":
+                tutorialView.loadUrl("file:///android_asset/functions.html");
                 break;
             case "Encapsulation":
                 break;

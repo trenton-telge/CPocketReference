@@ -141,7 +141,7 @@ public class MainMenuActivity extends AppCompatActivity {
         tutorials.add("While Loop");
         tutorials.add("Do-While Loop");
         tutorials.add("Functions");
-        tutorials.add("Encapsulation");
+        // TODO tutorials.add("Encapsulation");
 
         // Add links to HashMap
         listDataChild.put(listDataHeader.get(0), reference); // Header, Child data

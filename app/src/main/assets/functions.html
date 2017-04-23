@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html style="padding:0; margin:0;">
+
+<head> </head>
+
+<body style="padding:0; margin:0;">
+    <div style="width:100%; min-width:100%; padding:0; margin:0;"><span style='color:#696969; '>// Preprocessor directives </span>
+        <br /> <span style='color:#4CAF50; '>#include &lt;iostream&gt;</span>
+        <br /><span style='color:#4CAF50; '>#include &lt;iomanip&gt;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Standard namespace </span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>using namespace</span> <span style='color:#03a9f4; '>std</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Prototype of function print5</span>
+        <br /> <span style='color:#696969; '>// print5 has no arguments and does not return anything</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>void</span> <span style='color:#03a9f4; '>print5</span><span style='color:#f44336; '>()</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Prototype of funtion addInts</span>
+        <br /> <span style='color:#696969; '>// addInts had two integer arguments and returns an integer</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>addInts</span><span style='color:#f44336; '>(</span><span style='color:#ff530d; font-weight:bold; '>int</span><span style='color:#f44336; '>,</span> <span style='color:#ff530d; font-weight:bold; '>int</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Definition of function multiplyFloats</span>
+        <br /> <span style='color:#696969; '>// multiplyFloats has two float arguments and returns a double</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>double</span> <span style='color:#03a9f4; '>multiplyFloats</span><span style='color:#f44336; '>(</span><span style='color:#ff530d; font-weight:bold; '>float</span> <span style='color:#03a9f4; '>f1</span><span style='color:#f44336; '>,</span> <span style='color:#ff530d; font-weight:bold; '>float</span> <span style='color:#03a9f4; '>f2</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Returns the first argument times the second argument</span> <span style='color:#ff530d; font-weight:bold; '>return</span> <span style='color:#03a9f4; '>f1</span> <span style='color:#f44336; '>*</span> <span style='color:#03a9f4; '>f2</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Exits the multiplyFloats function</span>
+        <br /> <span style='color:#800080; '>}</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Instantiate the main function</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>main</span><span style='color:#f44336; '>(</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Declares and defines two integers</span>
+        <br /><span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>i1</span> <span style='color:#f44336; '>=</span> <span style='color:#008c00; '>3</span><span style='color:#f44336; '>,</span> <span style='color:#03a9f4; '>i2</span> <span style='color:#f44336; '>=</span> <span style='color:#008c00; '>4</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Calls addInts on i2 and i1, and prints the result on a line</span> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#03a9f4; '>addInts</span><span style='color:#f44336; '>(</span><span style='color:#ffc107; '>i2</span><span style='color:#f44336; '>,</span> <span style='color:#ffc107; '>i1</span><span style='color:#f44336; '>)</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Calls multiplyFloats on 2.48 and 9.1 and prints the result on a line</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>setprecision</span><span style='color:#f44336; '>(</span><span style='color:#008c00; '>2</span><span style='color:#f44336; '>)</span> <span style='color:#f44336; '>&lt;&lt;</span> fixed <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#03a9f4; '>multiplyFloats</span><span style='color:#f44336; '>(</span><span style='color:#008000; '>2.48</span><span style='color:#f44336; '>,</span> <span style='color:#008000; '>9.1</span><span style='color:#f44336; '>)</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#603000; '>endl</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Calls print5</span> <span style='color:#03a9f4; '>print5</span><span style='color:#f44336; '>(</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Return status 0 from main function</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>return</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+        <br /> <span style='color:#800080; '>}</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Definition of function print5</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>void</span> <span style='color:#03a9f4; '>print5</span><span style='color:#f44336; '>(</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Prints the number 5 on a line</span>
+        <br /> <span style='color:#603000; '>cout</span> <span style='color:#f44336; '>&lt;&lt;</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>5</span><span style='color:#f44336; '>\n</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Exits print5 function body</span>
+        <br /> <span style='color:#800080; '>}</span>
+        <br />
+        <br /> <span style='color:#696969; '>//Definition of function addInts</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>addInts</span><span style='color:#f44336; '>(</span><span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>i1</span><span style='color:#f44336; '>,</span> <span style='color:#ff530d; font-weight:bold; '>int</span> <span style='color:#03a9f4; '>i2</span><span style='color:#f44336; '>)</span><span style='color:#800080; '>{</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Returns first argument added to second argument</span>
+        <br /> <span style='color:#ff530d; font-weight:bold; '>return</span> <span style='color:#03a9f4; '>i1</span> <span style='color:#f44336; '>+</span> <span style='color:#03a9f4; '>i2</span><span style='color:#800080; '>;</span>
+        <br />
+        <br /> <span style='color:#696969; '>// Exits addInts funtion body</span>
+        <br /> <span style='color:#800080; '>}</span> </div>
+    <p style="background-color:black; font-family:monospace; color:#979797; padding:5px; padding-left:10px; padding-right:10px; margin:0; margin-top:10px;"> 0
+        <br /> 7
+        <br /> 22.57
+        <br /> 5
+        <br />main exited status 0. </p>
+</body>
+
+</html>
