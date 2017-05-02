@@ -58,6 +58,9 @@ public class MainMenuActivity extends AppCompatActivity {
         final Context c = this.getApplicationContext();
 
         // onChildClick listener set on main ListView, pointing to an anonymous inner function
+        expListView.expandGroup(0);
+        expListView.expandGroup(1);
+        expListView.expandGroup(2);
         expListView.setOnChildClickListener((parent, v, groupPosition, childPosition, id) -> {
             // Declare an intent to change Activities
             Intent intent;
