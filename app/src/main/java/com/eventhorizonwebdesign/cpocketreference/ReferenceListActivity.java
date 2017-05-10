@@ -239,7 +239,7 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(1), charConv);
                 break;
             default:
-
+                //TODO toast error
                 break;
         }
     }
