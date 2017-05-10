@@ -29,6 +29,8 @@ public class OperatorListActivity extends AppCompatActivity {
         prepareListData();
         operatorListAdapter = new OperatorListAdapter(this, listDataHeader, listDataChild);
         operatorListView.setAdapter(operatorListAdapter);
+
+        operatorListView.expandGroup(0);
     }
 
     private void prepareListData() {

@@ -28,7 +28,7 @@ public class ReferenceListActivity extends AppCompatActivity {
         prepareListData(t);
         listAdapter = new ReferenceListAdapter(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
-
+        expListView.expandGroup(0);
     }
 
     void prepareListData(String t){
