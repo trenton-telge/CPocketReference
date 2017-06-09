@@ -143,6 +143,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("cctype");
         libraries.add("clocale");
         libraries.add("cfenv");
+        libraries.add("csignal");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");

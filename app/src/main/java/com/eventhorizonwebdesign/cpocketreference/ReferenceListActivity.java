@@ -241,11 +241,11 @@ public class ReferenceListActivity extends AppCompatActivity {
             case "clocale":
                 listDataHeader.add("Functions");
 
-                List<String[]> functions = new ArrayList<>();
-                functions.add(new String[]{"setlocale", "[macro][string]", "Sets locale or return a string to identify the current locale"});
-                functions.add(new String[]{"localeconv", "", "Returns a lconv struct with the current locale's properties"});
+                List<String[]> localeFunctions = new ArrayList<>();
+                localeFunctions.add(new String[]{"setlocale", "[macro][string]", "Sets locale or return a string to identify the current locale"});
+                localeFunctions.add(new String[]{"localeconv", "", "Returns a lconv struct with the current locale's properties"});
 
-                listDataChild.put(listDataHeader.get(0), functions);
+                listDataChild.put(listDataHeader.get(0), localeFunctions);
                 break;
             case "cfenv":
                 listDataHeader.add("Floating-Point Exceptions");
@@ -272,6 +272,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(0), floatEx);
                 listDataChild.put(listDataHeader.get(1), round);
                 listDataChild.put(listDataHeader.get(2), env);
+                break;
+            case "csignal":
+                listDataHeader.add("Functions");
+
+                List<String[]> signalFunctions = new ArrayList<>();
+                signalFunctions.add(new String[]{"signal", "[macro][function]", "Sets signals of type arg1 to be handled by the function arg2"});
+                signalFunctions.add(new String[]{"raise", "[macro]", "Sends the signal specified as the macro arg"});
+
+                listDataChild.put(listDataHeader.get(0), signalFunctions);
                 break;
             default:
                 //TODO toast error
