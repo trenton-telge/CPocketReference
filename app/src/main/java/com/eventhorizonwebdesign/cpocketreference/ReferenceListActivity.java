@@ -238,6 +238,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(0), charClass);
                 listDataChild.put(listDataHeader.get(1), charConv);
                 break;
+            case "clocale":
+                listDataHeader.add("Functions");
+
+                List<String[]> functions = new ArrayList<>();
+                functions.add(new String[]{"setlocale", "[macro][string]", "Sets locale or return a string to identify the current locale"});
+                functions.add(new String[]{"localeconv", "", "Returns a lconv struct with the current locale's properties"});
+
+                listDataChild.put(listDataHeader.get(0), functions);
+                break;
             default:
                 //TODO toast error
                 break;
