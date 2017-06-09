@@ -247,6 +247,32 @@ public class ReferenceListActivity extends AppCompatActivity {
 
                 listDataChild.put(listDataHeader.get(0), functions);
                 break;
+            case "cfenv":
+                listDataHeader.add("Floating-Point Exceptions");
+                listDataHeader.add("Rounding");
+                listDataHeader.add("Environment Settings");
+
+                List<String[]> floatEx = new ArrayList<>();
+                floatEx.add(new String[]{"fetestexcept", "[macro]", "Returns the exceptions currently set that meet the arg, or zero if none are set"});
+                floatEx.add(new String[]{"feclearexcept", "[macro]", "Clears floating-point exceptions which meet the arg; returns zero if successful, non-zero if failed"});
+                floatEx.add(new String[]{"feraiseexcept", "[macro]", "Raises floating-point exceptions which meet the arg; returns zero if successful, non-zero if failed"});
+                floatEx.add(new String[]{"fegetexceptflag", "[fexcept_t][macro]", "Stores a representation of arg2 in arg1; returns zero if successful, non-zero if failed"});
+                floatEx.add(new String[]{"fesetexceptflag", "[fexcept_t][macro]", "Sets the exception flags requested by arg1 in arg2 without raising the exceptions; returns zero if successful, non-zero if failed"});
+
+                List<String[]> round = new ArrayList<>();
+                round.add(new String[]{"fegetround", "", "Returns macro associated with the current rounding mode"});
+                round.add(new String[]{"fesetround", "[macro]", "Sets the rounding mode to that specified in arg; returns zero if successful, non-zero if failed"});
+
+                List<String[]> env = new ArrayList<>();
+                env.add(new String[]{"fegetenv", "[fenv_t]", "Stores the state of the floating-point environment in arg; returns zero if successful, non-zero if failed"});
+                env.add(new String[]{"fesetenv", "[fenv_t]", "Sets the state of the floating-point environment as that described in arg; returns zero if successful, non-zero if failed"});
+                env.add(new String[]{"feholdexcept", "[fenv_t]", "Saves the state of the floating-point environment in arg, resets the state and puts the environment in non-stop mode; returns zero if successful, non-zero if failed"});
+                env.add(new String[]{"feupdateenv", "[fenv_t]", "Sets the state of the floating-point environment as described in arg and raises the exceptions that were set in the floating-point environment before the call; returns zero if successful, non-zero if failed"});
+
+                listDataChild.put(listDataHeader.get(0), floatEx);
+                listDataChild.put(listDataHeader.get(1), round);
+                listDataChild.put(listDataHeader.get(2), env);
+                break;
             default:
                 //TODO toast error
                 break;
