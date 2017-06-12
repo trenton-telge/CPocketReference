@@ -145,6 +145,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("cfenv");
         libraries.add("csignal");
         libraries.add("cstdio");
+        libraries.add("cstdlib");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");
