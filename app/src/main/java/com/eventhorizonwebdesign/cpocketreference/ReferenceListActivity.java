@@ -433,6 +433,39 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(6), mbchar);
                 listDataChild.put(listDataHeader.get(7), mbstr);
                 break;
+            case "cwctype":
+                listDataHeader.add("Character Classification");
+                listDataHeader.add("Character Conversion");
+                listDataHeader.add("Extendible Functions");
+
+                List<String[]> classif = new ArrayList<>();
+                classif.add(new String[]{"iswalnum", "[wint_t]", "Returns true if arg is alphanumeric, false otherwise"});
+                classif.add(new String[]{"iswalpha", "[wint_t]", "Returns true if arg is alphabetic, false otherwise"});
+                classif.add(new String[]{"iswblank", "[wint_t]", "Returns true if arg is a space or tab, fase otherwise"});
+                classif.add(new String[]{"iswcntrl", "[wint_t]", "Returns true if arg is a control character, false otherwise"});
+                classif.add(new String[]{"iswdigit", "[wint_t]", "Returns true if arg is a digit, false otherwise"});
+                classif.add(new String[]{"iswgraph", "[wint_t]", "Returns true if arg has a grapical representation, false otherwise"});
+                classif.add(new String[]{"iswlower", "[wint_t]", "Returns true if arg is a lowercase letter, false otherwise"});
+                classif.add(new String[]{"iswprint", "[wint_t]", "Returns true if arg is printable, false otherwise"});
+                classif.add(new String[]{"iswpunct", "[wint_t]", "Returns true if arg is punctuation, false otherwise"});
+                classif.add(new String[]{"iswspace", "[wint_t]", "Returns true of arg is a whitespace character, false otherwise"});
+                classif.add(new String[]{"iswupper", "[wint_t]", "Returns true if arg is an uppercase letter, false otherwise"});
+                classif.add(new String[]{"iswxdigit", "[wint_t]", "Returns true of arg is a hexadecimal digit, false otherwise"});
+
+                List<String[]> conv = new ArrayList<>();
+                conv.add(new String[]{"towlower", "[wint_t]", "Returns the lowercase representation of arg"});
+                conv.add(new String[]{"towupper", "[wint_t]", "Returns the uppercase representation of arg"});
+
+                List<String[]> extend = new ArrayList<>();
+                extend.add(new String[]{"iswctype", "[wint_t][wctype_t]", "Checks whether arg1 has the property specified by arg2"});
+                extend.add(new String[]{"towctrans", "[wint_t][wctype_t]", "Applies a the transformation specified by arg2 to the wide character arg1"});
+                extend.add(new String[]{"wctrans", "[string]", "Returns a value of type wctrans_t that corresponds to the character transformation by arg"});
+                extend.add(new String[]{"wctype", "[string]", "Returns a value of type wctype_t that corresponds to the character category specified by arg"});
+
+                listDataChild.put(listDataHeader.get(0), classif);
+                listDataChild.put(listDataHeader.get(1), conv);
+                listDataChild.put(listDataHeader.get(2), extend);
+                break;
             default:
                 //TODO toast error
                 break;

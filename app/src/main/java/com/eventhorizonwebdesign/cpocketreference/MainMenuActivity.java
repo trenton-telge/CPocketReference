@@ -146,6 +146,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("csignal");
         libraries.add("cstdio");
         libraries.add("cstdlib");
+        libraries.add("cwctype");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");
@@ -163,10 +164,5 @@ public class MainMenuActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(1), libraries);
         listDataChild.put(listDataHeader.get(2), tutorials);
     }
-
-
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
-    }
+    
 }
