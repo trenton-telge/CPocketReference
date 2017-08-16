@@ -89,16 +89,16 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataHeader.add("IO Manipulators");
 
                 List<String[]> manipulators = new ArrayList<>();
-                manipulators.add(new String[]{"setiosflags", "[Mask]", "Set specified format flags"});
-                manipulators.add(new String[]{"resetiosflags", "[Mask]", "Reset specified format flags"});
-                manipulators.add(new String[]{"setbase", "[Base]", "Set basefield flag"});
-                manipulators.add(new String[]{"setfill", "[char]", "Set fill character"});
+                manipulators.add(new String[]{"setiosflags", "[fmtflags]", "Set specified format flags"});
+                manipulators.add(new String[]{"resetiosflags", "[fmtflags]", "Reset specified format flags"});
+                manipulators.add(new String[]{"setbase", "[int]", "Set basefield flag"});
+                manipulators.add(new String[]{"setfill", "[char_type]", "Set fill character"});
                 manipulators.add(new String[]{"setprecision", "[int]", "Set decimal precision"});
                 manipulators.add(new String[]{"setw", "[int]", "Set field width"});
-                manipulators.add(new String[]{"get_money", "[long double]", "Gets monetary value to argument"});
-                manipulators.add(new String[]{"put_money", "[long double]", "Inserts monetary representation of argument"});
-                manipulators.add(new String[]{"get_time", "[struct tm][string]", "Gets time value to struct argument"});
-                manipulators.add(new String[]{"put_time", "[struct tm][string]", "Inserts time representation of struct argument"});
+                manipulators.add(new String[]{"get_money", "[moneyT&][bool]", "Gets monetary value to argument"});
+                manipulators.add(new String[]{"put_money", "[const moneyT&][bool]", "Inserts monetary representation of argument"});
+                manipulators.add(new String[]{"get_time", "[struct tm*][const charT*]", "Gets time value to struct argument"});
+                manipulators.add(new String[]{"put_time", "[const struct tm*][const charT*]", "Inserts time representation of struct argument"});
 
                 listDataChild.put(listDataHeader.get(0), manipulators);
                 break;

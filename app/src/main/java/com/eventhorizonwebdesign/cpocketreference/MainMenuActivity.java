@@ -147,6 +147,7 @@ public class MainMenuActivity extends AppCompatActivity {
         libraries.add("cstdio");
         libraries.add("cstdlib");
         libraries.add("cwctype");
+        libraries.add("cwchar");
 
         List<String> tutorials = new ArrayList<>();
         tutorials.add("Hello World");
@@ -164,5 +165,5 @@ public class MainMenuActivity extends AppCompatActivity {
         listDataChild.put(listDataHeader.get(1), libraries);
         listDataChild.put(listDataHeader.get(2), tutorials);
     }
-    
+
 }
