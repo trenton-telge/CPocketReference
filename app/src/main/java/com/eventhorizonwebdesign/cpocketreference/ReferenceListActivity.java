@@ -201,15 +201,15 @@ public class ReferenceListActivity extends AppCompatActivity {
                 List<String[]> timeManipulation = new ArrayList<>();
                 timeManipulation.add(new String[]{"clock", "", "Returns the processor time consumed by the program"});
                 timeManipulation.add(new String[]{"difftime", "[time_t][time_t]", "Returns difference of arg1 - arg2"});
-                timeManipulation.add(new String[]{"mktime", "[struct]", "Converts argument to a time_t"});
-                timeManipulation.add(new String[]{"time", "", "Returns the current calendar time as a value of type time_t"});
+                timeManipulation.add(new String[]{"mktime", "[struct tm*]", "Converts argument to a time_t"});
+                timeManipulation.add(new String[]{"time", "[time_t*]", "Returns the current calendar time as a value of type time_t or in arg"});
 
                 List<String[]> timeConversion = new ArrayList<>();
-                timeConversion.add(new String[]{"asctime", "[struct]", "Returns a readable string of the argument time in format Www&nbsp;Mmm&nbsp;dd&nbsp;hh:mm:ss&nbsp;yyyy"});
-                timeConversion.add(new String[]{"ctime", "[time_t]", "Returns a readable string of the argument time in format Www&nbsp;Mmm&nbsp;dd&nbsp;hh:mm:ss&nbsp;yyyy"});
-                timeConversion.add(new String[]{"gmtime", "[time_t]", "Returns a struct with the values that represent the corresponding time in GMT"});
-                timeConversion.add(new String[]{"localtime", "[time_t]", "Returns a struct with the values that represent the corresponding time in the local time zone"});
-                timeConversion.add(new String[]{"strftime", "[string][size_t][string][struct]", "Modifies arg1 to represent the time of arg4 with a max size of arg2 in the format specified by arg3"});
+                timeConversion.add(new String[]{"asctime", "[const struct tm*]", "Returns a readable string of the argument time in format Www&nbsp;Mmm&nbsp;dd&nbsp;hh:mm:ss&nbsp;yyyy"});
+                timeConversion.add(new String[]{"ctime", "[const time_t*]", "Returns a readable string of the argument time in format Www&nbsp;Mmm&nbsp;dd&nbsp;hh:mm:ss&nbsp;yyyy"});
+                timeConversion.add(new String[]{"gmtime", "[const time_t*]", "Returns a struct with the values that represent the corresponding time in GMT"});
+                timeConversion.add(new String[]{"localtime", "[const time_t*]", "Returns a struct with the values that represent the corresponding time in the local time zone"});
+                timeConversion.add(new String[]{"strftime", "[char*][size_t][char*][const struct tm*]", "Modifies arg1 to represent the time of arg4 with a max size of arg2 in the format specified by arg3"});
 
                 listDataChild.put(listDataHeader.get(0), timeManipulation);
                 listDataChild.put(listDataHeader.get(1), timeConversion);
