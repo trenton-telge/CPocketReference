@@ -371,41 +371,41 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataHeader.add("Multibyte Strings");
 
                 List<String[]> stringconv = new ArrayList<>();
-                stringconv.add(new String[]{"atof", "[string]", "Returns arg parsed to a double"});
-                stringconv.add(new String[]{"atoi", "[string]", "Returns arg parsed to an integer"});
-                stringconv.add(new String[]{"atol", "[string]", "Returns arg parsed to a long integer"});
-                stringconv.add(new String[]{"atoll", "[string]", "Returns arg parsed to a long long integer"});
-                stringconv.add(new String[]{"strtod", "[char[]][char*]", "Returns arg1 parsed to a double, with parsing ended at the character pointed to by arg2"});
-                stringconv.add(new String[]{"strtof", "[char[]][char*]", "Returns arg1 parsed to a float, with parsing ended at the character pointed to by arg2"});
-                stringconv.add(new String[]{"strtol", "[char[]][char*][int]", "Returns arg1 parsed to a long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
-                stringconv.add(new String[]{"strtold", "[char[]][char*]", "Returns arg1 parsed to a long double, with parsing ended at the character pointed to by arg2"});
-                stringconv.add(new String[]{"strtoll", "[char[]][char*][int]", "Returns arg1 parsed to a long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
-                stringconv.add(new String[]{"strtoul", "[char[]][char*][int]", "Returns arg1 parsed to an unsigned long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
-                stringconv.add(new String[]{"strtoull", "[char[]][char*][int]", "Returns arg1 parsed as an unsigned long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                stringconv.add(new String[]{"atof", "[const char*]", "Returns arg parsed to a double"});
+                stringconv.add(new String[]{"atoi", "[const char*]", "Returns arg parsed to an integer"});
+                stringconv.add(new String[]{"atol", "[const char*]", "Returns arg parsed to a long integer"});
+                stringconv.add(new String[]{"atoll", "[const char*]", "Returns arg parsed to a long long integer"});
+                stringconv.add(new String[]{"strtod", "[const char*][char**]", "Returns arg1 parsed to a double, with parsing ended at the character pointed to by arg2"});
+                stringconv.add(new String[]{"strtof", "[const char*][char**]", "Returns arg1 parsed to a float, with parsing ended at the character pointed to by arg2"});
+                stringconv.add(new String[]{"strtol", "[const char*][char**][int]", "Returns arg1 parsed to a long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                stringconv.add(new String[]{"strtold", "[const char*][char**]", "Returns arg1 parsed to a long double, with parsing ended at the character pointed to by arg2"});
+                stringconv.add(new String[]{"strtoll", "[const char*][char**][int]", "Returns arg1 parsed to a long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                stringconv.add(new String[]{"strtoul", "[const char*][char**][int]", "Returns arg1 parsed to an unsigned long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                stringconv.add(new String[]{"strtoull", "[const char*][char**][int]", "Returns arg1 parsed as an unsigned long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
 
                 List<String[]> randoms = new ArrayList<>();
                 randoms.add(new String[]{"rand", "", "Returns a pseudo-random integral number in the range between 0 and RAND_MAX"});
-                randoms.add(new String[]{"srand", "[int]", "Returns a pseudo-random integral number in the range between 0 and RAND_MAX, using arg as a seed"});
+                randoms.add(new String[]{"srand", "[unsigned int]", "Returns a pseudo-random integral number in the range between 0 and RAND_MAX, using arg as a seed"});
 
                 List<String[]> memmang = new ArrayList<>();
-                memmang.add(new String[]{"calloc", "[unsigned int][unsigned int]", "Allocates a block of memory for an array of arg1 elements, each of them arg2 bytes long, and initializes all its bits to zero"});
-                memmang.add(new String[]{"free", "[pointer]", "Deallocates a block of memory previously allocated by a call to malloc, calloc or realloc"});
-                memmang.add(new String[]{"malloc", "[unsigned int]", "Allocates a block of size bytes of memory, returning a pointer to the beginning of the block"});
-                memmang.add(new String[]{"realloc", "[unsigned int][unsigned int]", "Changes the size of the memory block pointed to by ptr to an array of arg1 elements, each of them arg2 bytes long"});
+                memmang.add(new String[]{"calloc", "[size_t][size_t]", "Allocates a block of memory for an array of arg1 elements, each of them arg2 bytes long, and initializes all its bits to zero"});
+                memmang.add(new String[]{"free", "[void*]", "Deallocates a block of memory previously allocated by a call to malloc, calloc or realloc"});
+                memmang.add(new String[]{"malloc", "[size_t]", "Allocates a block of size bytes of memory, returning a pointer to the beginning of the block"});
+                memmang.add(new String[]{"realloc", "[void*][size_t]", "Changes the size of the memory block pointed to by ptr to an array of arg1 elements, each of them arg2 bytes long"});
 
                 List<String[]> envmod = new ArrayList<>();
                 envmod.add(new String[]{"abort", "", "Aborts the current process and sends an abnormal exit code"});
-                envmod.add(new String[]{"atexit", "[function]", "Arg is automatically called without arguments when the program terminates normally; returns zero if successful, non-zero if failed"});
-                envmod.add(new String[]{"at_quick_exit", "[function]", "Arg is automatically called without arguments when the program calls quick_exit; returns zero if successful, non-zero if failed"});
+                envmod.add(new String[]{"atexit", "[void (*func)(void)]", "Arg is automatically called without arguments when the program terminates normally; returns zero if successful, non-zero if failed"});
+                envmod.add(new String[]{"at_quick_exit", "[void (*func)(void)]", "Arg is automatically called without arguments when the program calls quick_exit; returns zero if successful, non-zero if failed"});
                 envmod.add(new String[]{"exit", "[int]", "Aborts the current process normally, using arg as the exit code"});
-                envmod.add(new String[]{"getenv", "[string]", "Returns the value of the environment variable whose name is specified as arg, or null if that variable does not exist"});
+                envmod.add(new String[]{"getenv", "[const char*]", "Returns the value of the environment variable whose name is specified as arg, or null if that variable does not exist"});
                 envmod.add(new String[]{"quick_exit", "[int]", "Terminates the process normally by returning control to the host environment"});
-                envmod.add(new String[]{"system", "[string]", "Invokes the command processor to execute the command arg"});
+                envmod.add(new String[]{"system", "[const char*]", "Invokes the command processor to execute the command arg"});
                 envmod.add(new String[]{"_Exit", "[int]", "borts the current process normally, without performing any cleanup, using arg as the exit code"});
 
                 List<String[]> searchsort = new ArrayList<>();
-                searchsort.add(new String[]{"bsearch", "[(void*)object][(void*)object][size_t][size_t][function]", "Searches the arg1 in the array pointed to by arg2 (which is formed by arg3 elements, each of arg4 bytes), using the search function arg5, and returns a void* pointer to a matching element, if found"});
-                searchsort.add(new String[]{"qsort", "[(void*)object][size_t][size_t][function]", "Sorts the arg2 elements of the array pointed to by arg1, each element arg3 bytes long, using the arg4 function to determine the order."});
+                searchsort.add(new String[]{"bsearch", "[const void*][const void*][size_t][size_t][int (*compar)(const void*,const void*)]", "Searches the arg1 in the array pointed to by arg2 (which is formed by arg3 elements, each of arg4 bytes), using the search function arg5, and returns a void* pointer to a matching element, if found"});
+                searchsort.add(new String[]{"qsort", "[void*][size_t][size_t][int (*compar)(const void*,const void*)]", "Sorts the arg2 elements of the array pointed to by arg1, each element arg3 bytes long, using the arg4 function to determine the order."});
 
                 List<String[]> intarith = new ArrayList<>();
                 intarith.add(new String[]{"abs", "[int]", "Returns the absolute value of arg"});
@@ -416,13 +416,13 @@ public class ReferenceListActivity extends AppCompatActivity {
                 intarith.add(new String[]{"[lldiv]", "[long long int][long long int]", "Returns the integral quotient and remainder of the division of arg1 by arg2 as a structure of type lldiv_t"});
 
                 List<String[]> mbchar = new ArrayList<>();
-                mbchar.add(new String[]{"mblen", "[char*][size_t]", "Returns the size of the multibyte character pointed by arg1, examining at most arg2 bytes"});
-                mbchar.add(new String[]{"mbtowc", "[wchar_t][char*][size_t]", "The multibyte character pointed by arg2, examining at most arg3 bytes, is converted to a value of type wchar_t and stored at the location pointed by arg1; returns the length in bytes of the multibyte character."});
-                mbchar.add(new String[]{"wctomb", "[char[]][wchar_t]", "Arg2 is translated to its multibyte equivalent and stored in the array pointed by arg1; returns the length in bytes of the equivalent multibyte sequence pointed by arg1 after the call."});
+                mbchar.add(new String[]{"mblen", "[const char*][size_t]", "Returns the size of the multibyte character pointed by arg1, examining at most arg2 bytes"});
+                mbchar.add(new String[]{"mbtowc", "[wchar_t*][const char*][size_t]", "The multibyte character pointed by arg2, examining at most arg3 bytes, is converted to a value of type wchar_t and stored at the location pointed by arg1; returns the length in bytes of the multibyte character."});
+                mbchar.add(new String[]{"wctomb", "[char*][wchar_t]", "Arg2 is translated to its multibyte equivalent and stored in the array pointed by arg1; returns the length in bytes of the equivalent multibyte sequence pointed by arg1 after the call."});
 
                 List<String[]> mbstr = new ArrayList<>();
-                mbstr.add(new String[]{"mbstowcs", "[wchar_t[]][string][size_t]", "Translates the multibyte sequence pointed by arg2 to the equivalent sequence of wide-characters (arg1), up to arg3 long"});
-                mbstr.add(new String[]{"wcstombs", "[char[]][string][size_t]", "Translates the wide-character sequence pointed by arg2 to the equivalent multibyte character sequence (arg1), up to arg3 long"});
+                mbstr.add(new String[]{"mbstowcs", "[wchar_t*][const char*][size_t]", "Translates the multibyte sequence pointed by arg2 to the equivalent sequence of wide-characters (arg1), up to arg3 long"});
+                mbstr.add(new String[]{"wcstombs", "[char*][const wchar_t*][size_t]", "Translates the wide-character sequence pointed by arg2 to the equivalent multibyte character sequence (arg1), up to arg3 long"});
 
                 listDataChild.put(listDataHeader.get(0), stringconv);
                 listDataChild.put(listDataHeader.get(1), randoms);
