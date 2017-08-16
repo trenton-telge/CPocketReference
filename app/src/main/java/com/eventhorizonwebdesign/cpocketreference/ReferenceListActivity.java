@@ -466,6 +466,88 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataChild.put(listDataHeader.get(1), conv);
                 listDataChild.put(listDataHeader.get(2), extend);
                 break;
+            case "cwchar":
+                listDataHeader.add("Wide Character I/O");
+                listDataHeader.add("Wide Character Utilities");
+                listDataHeader.add("String Conversion");
+                listDataHeader.add("Wide Character Strings");
+                listDataHeader.add("Wide Character Time");
+
+                List<String[]> wcio = new ArrayList<>();
+                wcio.add(new String[]{"fgetwc", "[FILE*]", "Returns the wide character currently pointed by the internal position indicator of arg stream"});
+                wcio.add(new String[]{"fgetws", "[wchar_t*][int][FILE*]", "Reads wide characters from arg3 and stores them in arg1 into ws until (arg2-1) characters have been read or either a newline or the end-of-file is reached"});
+                wcio.add(new String[]{"fputwc", "[wchar_t][FILE*]", "Writes the wide character arg1 to the stream arg2 and advances the position indicator"});
+                wcio.add(new String[]{"fputws", "[const wchar_t*][FILE*]", "Writes the wide C string pointed by arg1 to the stream arg2"});
+                wcio.add(new String[]{"fwide", "[FILE*][int]", "Determines the orientation of arg1, and if it has not yet an established orientation, it may be set, depending on the value of arg2"});
+                wcio.add(new String[]{"fwprintf", "[FILE*][const wchar_t*]...", "Writes the C wide string pointed by arg2 to arg1, formatted by the rules in arg3+"});
+                wcio.add(new String[]{"fwscanf", "[FILE*][const wchar_t*]...", "Reads the stream arg1 into arg3+, formatted by the rules in arg2"});
+                wcio.add(new String[]{"getwc", "[FILE*]", "Returns the wide character currently pointed by the internal position indicator of arg"});
+                wcio.add(new String[]{"getwchar", "", "Returns the next wide character from the standard input"});
+                wcio.add(new String[]{"putwc", "[wchar_t][FILE*]", "Writes arg1 to arg2 and advances the position indicator"});
+                wcio.add(new String[]{"putwchar", "[wchar_t]", "Writes arg to the standard output"});
+                wcio.add(new String[]{"swprintf", "[wchar_t*][size_t][const wchar_t*]...", "Stores a maximum of arg2 characters formatted from arg4+ formatted with arg3 in arg1"});
+                wcio.add(new String[]{"swscanf", "[const wchar_t*][const wchar_t*]...", "Reads data from arg1 and stores them according to arg2 into arg3+"});
+                wcio.add(new String[]{"ungetwc", "[wint_t][FILE*]", "Arg1 is virtually put back into arg2"});
+                wcio.add(new String[]{"vfwprintf", "[FILE*][const wchar_t*][va_list]", "Writes the C wide string pointed by arg2 to arg1, formatted by the rules in arg3"});
+                wcio.add(new String[]{"vfwscanf", "[FILE*][const wchar_t*][va_list]", "Reads the stream arg1 into arg3, formatted by the rules in arg2"});
+                wcio.add(new String[]{"vswprintf", "[wchar_t*][size_t][const wchar_t*][va_list]", "Stores a maximum of arg2 characters formatted from arg4 formatted with arg3 in arg1"});
+                wcio.add(new String[]{"vswscanf", "[const wchar_t*][const wchar_t*][va_list]", "Reads data from arg1 and stores them according to arg2 into arg3"});
+                wcio.add(new String[]{"vwprintf", "[const wchar_t*][va_list]", "Prints arg2 formatted by arg1 to stdout"});
+                wcio.add(new String[]{"vwscanf", "[const wchar_t*][va_list]", "Scans arg2 formatted by arg1 from stdin"});
+                wcio.add(new String[]{"wprintf", "[const wchar_t*]...", "Prints arg2+ formatted by arg1 to stdout"});
+                wcio.add(new String[]{"wscanf", "[const wchar_t*]...", "Scans arg2+ formatted by arg1 from stdin"});
+
+                List<String[]> wcutil = new ArrayList<>();
+                wcutil.add(new String[]{"wcstod", "[const wchar_t*][wchar_t**]", "Returns arg1 parsed to a double, with parsing ended at the character pointed to by arg2"});
+                wcutil.add(new String[]{"wcstof", "[const wchar_t*][wchar_t**]", "Returns arg1 parsed to a float, with parsing ended at the character pointed to by arg2"});
+                wcutil.add(new String[]{"wcstol", "[const wchar_t*][wchar_t**][int]", "Returns arg1 parsed to a long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                wcutil.add(new String[]{"wcstold", "[const wchar_t*][wchar_t**]", "Returns arg1 parsed to a long double, with parsing ended at the character pointed to by arg2"});
+                wcutil.add(new String[]{"wcstoll", "[const wchar_t*][wchar_t**][int]", "Returns arg1 parsed to a long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                wcutil.add(new String[]{"wcstoul", "[const wchar_t*][wchar_t**][int]", "Returns arg1 parsed to an unsigned long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+                wcutil.add(new String[]{"wcstoull", "[const wchar_t*][wchar_t**][int]", "Returns arg1 parsed as an unsigned long long integer, with parsing ended at the character pointed to by arg2 and the base arg3"});
+
+                List<String[]> wcconv = new ArrayList<>();
+                wcconv.add(new String[]{"btowc", "[int]", "Returns the wide character representation of arg"});
+                wcconv.add(new String[]{"mbrlen", "[const char*][size_t][mbstate_t*]", "Returns the size of the multibyte character pointed to by arg1, examining at most arg2 bytes, in state arg3"});
+                wcconv.add(new String[]{"mbrtowc", "[wchar_t*][const char*][size_t][mbstate_t*]", "The multibyte character pointed by arg2 is converted to a value of type wchar_t and stored at the location pointed by arg1, examining at most arg3 bytes, in state arg4"});
+                wcconv.add(new String[]{"mbsinit", "[const mbstate_t*]", "Checks whether arg points to a mbstate_t object that describes an initial conversion state"});
+                wcconv.add(new String[]{"mbsrtowcs", "[wchar_t*][const char**][size_t][mbstate_t*]", "The multibyte sequence pointed by arg2 is converted to a wide character sequence and stored at the location pointed by arg1, examining at most arg3 bytes, in state arg4"});
+                wcconv.add(new String[]{"wcrtomb", "[char*][wchar_t][mbstate_t*]", "The wide character arg2 is translated to its multibyte equivalent and stored in the array pointed by arg1, in state arg3"});
+                wcconv.add(new String[]{"wctomb", "[wint_t]", "Returns the single-byte representation of the wide character arg"});
+                wcconv.add(new String[]{"wcsrtombs", "[char*][const wchar_t**][size_t][mbstate_t*]", "Translates up to arg3 characters of the C wide string indirectly pointed by arg2 to their multibyte sequence equivalents and stores them in the buffer pointed by arg1, in state arg4, stopping if a terminating null wide character is encountered"});
+
+                List<String[]> wcstr = new ArrayList<>();
+                wcstr.add(new String[]{"wcscat", "[wchar_t*][const wchar_t*]", "Appends a copy of arg2 to the end of arg1"});
+                wcstr.add(new String[]{"wcschr", "[wchar_t*][wchar_t]", "Returns a pointer to the first occurrence of arg2 in arg1"});
+                wcstr.add(new String[]{"wcscmp", "[const wchar_t*][const wchar_t*]", "If arg1 = arg2, returns 0, otherwise, returns nonzero"});
+                wcstr.add(new String[]{"wcscoll", "[const wchar_t*][const wchar_t*]", "If arg1 = arg2, returns 0, otherwise, returns nonzero"});
+                wcstr.add(new String[]{"wcscpy", "[wchar_t*][const wchar_t*]", "Copies arg2 to arg1"});
+                wcstr.add(new String[]{"wcscspn", "[const wchar_t*][const wchar_t*]", "Scans arg1 for the first occurrence of any of the wide characters that are part of arg2, returning the number of wide characters of arg1 read before this first occurrence"});
+                wcstr.add(new String[]{"wcslen", "[const wchar_t*]", "Returns the length of arg"});
+                wcstr.add(new String[]{"wcsncat", "[wchar_t*][const wchar_t*][size_t]", "Appends the first arg3 wide characters of arg2 to arg1, plus a terminating null wide character"});
+                wcstr.add(new String[]{"wcsncmp", "[const wchar_t*][const wchar_t*][size_t]", "Compares up to arg3 characters arg1 to arg2; if equal, returns 0, if not, returns nonzero"});
+                wcstr.add(new String[]{"wcsncpy", "[wchar_t*][const wchar_t*][size_t]", "Copies the first arg3 characters of arg2 to arg1"});
+                wcstr.add(new String[]{"wcspbrk", "[wchar_t*][const wchar_t*]", "Returns a pointer to the first occurrence in arg1 of any of the wide characters that are part of arg2, or a null pointer if there are no matches"});
+                wcstr.add(new String[]{"wcsrchr", "[wchar_t*][const wchar_t*]", "Returns a pointer to the last occurrence of arg2 in the C wide string arg1"});
+                wcstr.add(new String[]{"wcsspn", "[const wchar_t*][const wchar_t*]", "Returns the length of the initial portion of arg1 which consists only of wide characters that are part of arg2"});
+                wcstr.add(new String[]{"wcsstr", "[wchar_t*][const wchar_t*]", "Returns a pointer to the first occurrence of arg2 in arg1, or a null pointer if there are no matches"});
+                wcstr.add(new String[]{"wcstok", "[wchar_t*][const wchar_t*]", "A sequence of calls to this function split arg1 into tokens, delimited by any of the wide characters that are part of arg2"});
+                wcstr.add(new String[]{"wcsxfrm", "[wchar_t*][const wchar_t*][size_t]", "Transforms the C wide string pointed by arg2 according to the current locale and copies the first arg3 characters of the transformed string to arg1, returning its length"});
+                wcstr.add(new String[]{"wmemchr", "[wchar_t*][whcar_t][size_t]", "Searches within the first arg3 wide characters of the block pointed by arg1 for the first occurrence of arg2, and returns a pointer to it, or a null pointer if there are no matches"});
+                wcstr.add(new String[]{"wmemcmp", "[const wchar_t*][const wchar_t*][size_t]", "Compares the first arg3 wide characters of the block of memory pointed by arg1 to the first arg3 wide characters pointed by arg2, returning zero if they all match, or a null pointer if there are no matches"});
+                wcstr.add(new String[]{"wmemcpy", "[wchar_t*][const wchar_t*][size_t]", "Copies the values of arg3 elements of type wchar_t from the location pointed by arg2 to the location pointed by arg1"});
+                wcstr.add(new String[]{"wmemmove", "[wchar_t*][const wchar_t*][size_t]", "Moves the values of arg3 elements of type wchar_t from the location pointed by arg2 to the location pointed by arg1"});
+                wcstr.add(new String[]{"wmemset", "[wchar_t*][whcar_t][size_t]", "Sets the first arg3 elements of the array of wide characters pointed by arg1 to the value specified as arg2"});
+
+                List<String[]> wctime = new ArrayList<>();
+                wctime.add(new String[]{"wcsftime", "[wchar_t*][size_t][const wchar_t*][const struct tm*]", "Copies into arg1 the content of arg3, expanding its format tags into the corresponding values as specified by arg4, with a limit of arg2 characters"});
+
+                listDataChild.put(listDataHeader.get(0), wcio);
+                listDataChild.put(listDataHeader.get(1), wcutil);
+                listDataChild.put(listDataHeader.get(2), wcconv);
+                listDataChild.put(listDataHeader.get(3), wcstr);
+                listDataChild.put(listDataHeader.get(4), wctime);
+                break;
             default:
                 //TODO toast error
                 break;
