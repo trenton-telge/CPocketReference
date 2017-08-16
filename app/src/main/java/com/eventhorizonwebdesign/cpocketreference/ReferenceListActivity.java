@@ -278,8 +278,8 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataHeader.add("Functions");
 
                 List<String[]> signalFunctions = new ArrayList<>();
-                signalFunctions.add(new String[]{"signal", "[macro][function]", "Sets signals of type arg1 to be handled by the function arg2"});
-                signalFunctions.add(new String[]{"raise", "[macro]", "Sends the signal specified as the macro arg"});
+                signalFunctions.add(new String[]{"signal", "[int][void(*func)(int)]", "Sets signals of type arg1 to be handled by the function arg2"});
+                signalFunctions.add(new String[]{"raise", "[int]", "Sends the signal specified as the macro arg"});
 
                 listDataChild.put(listDataHeader.get(0), signalFunctions);
                 break;
