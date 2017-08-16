@@ -243,7 +243,7 @@ public class ReferenceListActivity extends AppCompatActivity {
                 listDataHeader.add("Functions");
 
                 List<String[]> localeFunctions = new ArrayList<>();
-                localeFunctions.add(new String[]{"setlocale", "[macro][string]", "Sets locale or return a string to identify the current locale"});
+                localeFunctions.add(new String[]{"setlocale", "[int][const char*]", "Sets locale or return a string to identify the current locale"});
                 localeFunctions.add(new String[]{"localeconv", "", "Returns a lconv struct with the current locale's properties"});
 
                 listDataChild.put(listDataHeader.get(0), localeFunctions);
